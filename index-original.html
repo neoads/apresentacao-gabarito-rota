@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apresentação Comercial · Gabarito ROTA</title>
+<meta name="description" content="Deck comercial do GABARITO ROTA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--navy-0:#050e1f;--navy-1:#0B1E3D;--navy-2:#102a52;--gold:#FFC21A;--white:#fff;--muted:#9DB2D6;--line:rgba(255,194,26,.3);--hair:rgba(255,255,255,.09);--red:#ff6b6b}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-snap-type:y mandatory;scroll-behavior:smooth}
+  body{font-family:'Inter',Arial,sans-serif;color:var(--white);background:var(--navy-1);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+  section.s{position:relative;min-height:100svh;scroll-snap-align:start;display:flex;flex-direction:column;justify-content:center;padding:8vh 7vw;overflow:hidden;border-bottom:1px solid rgba(255,255,255,.05);background:linear-gradient(165deg,var(--navy-1),var(--navy-0))}
+  section.s.hot{background:radial-gradient(1200px 600px at 50% 40%,rgba(255,194,26,.14),transparent 60%),linear-gradient(165deg,var(--navy-1),var(--navy-0))}
+  section.s.dark{background:linear-gradient(165deg,#0a1526,#05070f)}
+  section.s.flush{padding:0}
+  .num{position:absolute;top:18px;left:5vw;font-family:'Inter';font-size:11px;letter-spacing:.16em;color:var(--muted);z-index:5}
+  .disp{font-family:'Archivo',Arial,sans-serif;font-weight:900;text-transform:uppercase;line-height:.95;letter-spacing:-.01em;text-wrap:balance}
+  .kick{font-family:'Archivo';font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--gold);font-size:clamp(13px,1.4vw,16px);margin-bottom:18px}
+  .kick.red{color:var(--red)}
+  h1{font-size:clamp(40px,7vw,92px)}
+  h2{font-size:clamp(28px,4.8vw,62px)}
+  .lead{font-family:'Inter';font-size:clamp(16px,1.7vw,23px);color:var(--muted);max-width:60ch;line-height:1.5;margin-top:20px}
+  .lead b{color:var(--white);font-weight:700}
+  .gold{color:var(--gold)}.red{color:var(--red)}
+  ul.b{list-style:none;margin-top:22px;max-width:66ch}
+  ul.b li{position:relative;padding:9px 0 9px 28px;font-size:clamp(15px,1.7vw,21px);font-weight:600;line-height:1.3;border-bottom:1px solid var(--hair)}
+  ul.b li:last-child{border-bottom:none}
+  ul.b li::before{content:"";position:absolute;left:0;top:16px;width:10px;height:10px;background:var(--gold);transform:rotate(45deg)}
+  ul.b.x li::before{background:var(--red)}
+  .topics{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:36px;max-width:80ch}
+  @media(max-width:820px){.topics{grid-template-columns:1fr;gap:16px}}
+  .topic{display:flex;gap:13px;align-items:flex-start}.topic .ic{font-size:28px;line-height:1}
+  .topic p{font-size:clamp(14px,1.5vw,18px);font-weight:600;line-height:1.35}
+  .auth{display:grid;grid-template-columns:.85fr 1.15fr;gap:34px;align-items:center}
+  @media(max-width:820px){.auth{grid-template-columns:1fr;gap:22px}}
+  .authbrand{border:1px solid var(--line);border-radius:12px;min-height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:rgba(255,194,26,.05);text-align:center;padding:24px}
+  .authbrand .owl{font-size:76px}.authbrand b{font-family:'Archivo';font-weight:900;font-size:30px}.authbrand span{color:var(--gold);letter-spacing:.4em;font-weight:800;font-size:12px}
+  .badge{display:inline-block;margin-top:18px;font-family:'Archivo';font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-size:13px;color:var(--gold)}
+  .boxlead{border:1px solid var(--line);border-radius:10px;padding:18px 22px;font-size:clamp(16px,1.9vw,23px);font-weight:600;line-height:1.35;max-width:62ch;margin-top:8px}.boxlead b{color:var(--gold)}
+  .grid6{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+  @media(max-width:820px){.grid6{grid-template-columns:1fr}}
+  .cell{border:1px solid var(--hair);border-radius:10px;padding:20px;background:rgba(255,255,255,.02)}
+  .cell.risk{border-color:rgba(255,107,107,.3);background:rgba(255,107,107,.06)}
+  .cell .ci{font-size:26px;margin-bottom:8px}
+  .cell h4{font-family:'Archivo';font-weight:800;text-transform:uppercase;font-size:15.5px;margin-bottom:5px}
+  .cell.risk h4{color:var(--red)}.cell:not(.risk) h4{color:var(--gold)}
+  .cell p{color:var(--muted);font-size:14px;line-height:1.4}
+  .qbar{display:flex;align-items:center;gap:14px;margin-top:26px;background:linear-gradient(90deg,var(--gold),#f5a623);color:#1a1205;border-radius:999px;padding:13px 26px;font-family:'Archivo';font-weight:900;text-transform:uppercase;font-size:clamp(15px,2vw,24px);width:fit-content}.qbar .q{font-size:24px}
+  .wheel{display:grid;grid-template-columns:1fr auto 1fr;grid-template-rows:1fr 1fr;grid-template-areas:"tl hub tr" "bl hub br";gap:18px;align-items:center;justify-items:center;margin-top:26px}
+  @media(max-width:820px){.wheel{grid-template-columns:1fr;grid-template-rows:none;grid-template-areas:"hub" "tl" "tr" "bl" "br";gap:12px}}
+  .hub{width:clamp(120px,15vw,180px);height:clamp(120px,15vw,180px);border-radius:50%;background:radial-gradient(circle,var(--gold),#e0a800);color:#1a1205;display:flex;align-items:center;justify-content:center;text-align:center;font-family:'Archivo';font-weight:900;text-transform:uppercase;font-size:clamp(13px,1.6vw,18px);line-height:1.05;box-shadow:0 0 0 12px rgba(255,194,26,.12)}
+  .spoke{border:1px solid var(--line);border-radius:12px;padding:15px 18px;background:rgba(255,194,26,.05);max-width:320px}
+  .spoke b{font-family:'Archivo';font-weight:900;color:var(--gold);font-size:17px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .spoke p{color:var(--muted);font-size:13.5px;line-height:1.4}
+  .stairs{display:flex;align-items:flex-end;gap:12px;margin-top:28px}
+  @media(max-width:820px){.stairs{flex-direction:column;align-items:stretch}}
+  .step2{flex:1;border:1px solid var(--line);border-bottom:none;border-radius:10px 10px 0 0;background:linear-gradient(180deg,rgba(255,194,26,.14),rgba(255,194,26,.02));padding:18px;display:flex;flex-direction:column;justify-content:flex-end}
+  .step2 .n2{font-family:'Archivo';font-weight:900;color:var(--gold);font-size:34px;line-height:1}
+  .step2 b{font-family:'Archivo';font-weight:800;text-transform:uppercase;font-size:15px;margin:6px 0 4px}
+  .step2 p{color:var(--muted);font-size:13px;line-height:1.4}
+  .step2:nth-child(1){min-height:150px}.step2:nth-child(2){min-height:200px}.step2:nth-child(3){min-height:250px}.step2:nth-child(4){min-height:300px}
+  @media(max-width:820px){.step2{min-height:0!important;border-bottom:1px solid var(--line);border-radius:10px}}
+  .tag{display:inline-flex;align-items:center;gap:8px;margin-top:26px;background:var(--gold);color:#1a1205;font-family:'Archivo';font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:clamp(14px,1.5vw,18px);padding:9px 18px;border-radius:4px;width:fit-content}
+  .tag.ghost{background:transparent;color:var(--gold);border:2px solid var(--gold)}
+  .ab{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px}
+  @media(max-width:820px){.ab{grid-template-columns:1fr}}
+  .col{border:1px solid var(--hair);border-radius:10px;padding:24px}
+  .col.b1{background:rgba(255,107,107,.06);border-color:rgba(255,107,107,.3)}
+  .col.b2{background:rgba(255,194,26,.07);border-color:var(--line)}
+  .col h4{font-family:'Archivo';font-weight:900;text-transform:uppercase;font-size:clamp(20px,2.4vw,30px);margin-bottom:12px}
+  .col.b1 h4{color:var(--red)}.col.b2 h4{color:var(--gold)}
+  .col ul{list-style:none}.col li{padding:7px 0;font-size:clamp(15px,1.6vw,19px);font-weight:600;border-bottom:1px solid var(--hair)}.col li:last-child{border-bottom:none}
+  .stack{margin-top:20px;max-width:70ch}
+  .stack .r{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:8px 0;border-bottom:1px solid var(--hair);font-size:clamp(13px,1.5vw,18px)}
+  .stack .r span:first-child{font-weight:600}.stack .r span:last-child{font-family:'Archivo';font-weight:800;color:var(--gold);white-space:nowrap}
+  .stack .tot{display:flex;justify-content:space-between;align-items:baseline;margin-top:14px;padding-top:14px;border-top:2px solid var(--gold)}
+  .stack .tot span:first-child{font-family:'Archivo';font-weight:900;text-transform:uppercase;font-size:clamp(16px,1.8vw,22px)}
+  .stack .tot span:last-child{font-family:'Archivo';font-weight:900;color:var(--gold);font-size:clamp(26px,4vw,52px)}
+  .econ{margin-top:30px;max-width:880px}
+  .econ .cap{color:var(--gold);font-family:'Archivo';font-weight:800;text-transform:uppercase;font-size:13px;letter-spacing:.06em;margin-bottom:10px}
+  .econ .track{position:relative;height:46px;background:var(--hair);border-radius:5px;border-left:4px solid var(--gold);border-right:4px solid var(--gold)}
+  .econ .fill{position:absolute;left:0;top:0;bottom:0;width:36%;background:repeating-linear-gradient(90deg,var(--gold) 0 7px,#c98f00 7px 14px)}
+  .econ .ends{display:flex;justify-content:space-between;margin-top:8px;font-family:'Archivo';font-weight:900;color:var(--gold);font-size:14px}
+  .econ .mark{position:absolute;top:-30px;transform:translateX(-50%);color:var(--gold);font-family:'Archivo';font-weight:800;font-size:11.5px;text-transform:uppercase;white-space:nowrap;text-align:center}
+  .econ .mark::after{content:"▼";display:block;margin-top:2px}
+  .split{display:grid;grid-template-columns:1fr 1fr;min-height:100svh}
+  @media(max-width:820px){.split{grid-template-columns:1fr}}
+  .split .half{padding:8vh 6vw;display:flex;flex-direction:column;justify-content:center}
+  .split .l{background:#0a1526}
+  .split .r{background:radial-gradient(circle at 75% 25%,rgba(255,194,26,.28),transparent 60%),linear-gradient(135deg,#123058,#0b1e3d)}
+  .split .lbl2{font-family:'Archivo';font-weight:900;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-size:clamp(14px,1.6vw,19px);margin-bottom:8px}
+  .split .r .lbl2{color:var(--gold)}
+  .split .pr{font-family:'Archivo';font-weight:900;font-size:clamp(44px,7vw,92px);line-height:.92}
+  .split .l .pr{color:#fff}.split .r .pr{color:var(--gold)}
+  .split .sub2{color:var(--muted);font-weight:600;margin-top:12px;font-size:clamp(14px,1.5vw,19px)}
+  .price{margin-top:10px}
+  .price .old{font-family:'Archivo';font-weight:800;color:var(--muted);text-decoration:line-through;font-size:clamp(22px,3vw,38px)}
+  .price .big{font-family:'Archivo';font-weight:900;color:var(--gold);font-size:clamp(70px,15vw,190px);line-height:.9}
+  .price .par{font-family:'Archivo';font-weight:800;font-size:clamp(20px,2.4vw,32px);margin-top:8px}
+  .ask{font-family:'Archivo';font-weight:900;text-transform:uppercase;font-size:clamp(30px,5.5vw,72px);line-height:1.02;max-width:20ch}
+  .slot{margin-top:22px;border:2px dashed var(--line);border-radius:10px;padding:26px;color:var(--gold);background:rgba(255,194,26,.05);font-weight:700;font-size:16px;max-width:64ch}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1)}
+  .s.on .reveal{opacity:1;transform:none}
+  .s.on .reveal:nth-child(2){transition-delay:.05s}.s.on .reveal:nth-child(3){transition-delay:.1s}.s.on .reveal:nth-child(4){transition-delay:.15s}.s.on .reveal:nth-child(5){transition-delay:.2s}.s.on .reveal:nth-child(6){transition-delay:.25s}
+  .prog{position:fixed;top:0;left:0;height:4px;background:var(--gold);width:0;z-index:30;transition:width .2s}
+  .count{position:fixed;bottom:14px;right:18px;font-size:11px;letter-spacing:.14em;color:var(--muted);z-index:30}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="prog" id="prog"></div><div class="count" id="count">01</div>
+
+<section class="s hot"><span class="num">01</span>
+  <div style="text-align:center;width:100%">
+    <div class="reveal" style="font-size:clamp(70px,15vw,150px);line-height:1">🦉</div>
+    <h1 class="disp reveal" style="font-size:clamp(48px,12vw,150px);margin-top:4px">GABARITO</h1>
+    <div class="reveal" style="font-family:'Archivo';font-weight:800;letter-spacing:.5em;color:var(--gold);font-size:clamp(16px,2.6vw,32px);margin-top:8px">EDUCAÇÃO</div>
+  </div>
+  <div class="slot reveal" style="margin:32px auto 0">[SLOT] opção: foto da equipe dando aula como fundo, ou só o logo.</div>
+</section>
+
+<section class="s"><span class="num">02</span>
+  <div class="kick reveal">A oportunidade</div>
+  <h2 class="disp reveal">Uma oportunidade de tirar seu filho das <span class="gold">notas vermelhas</span> e torná-lo independente nos estudos.</h2>
+  <div class="topics">
+    <div class="topic reveal"><span class="ic">🎯</span><p>Com foco em recuperar as notas e criar autonomia</p></div>
+    <div class="topic reveal"><span class="ic">🛟</span><p>Sem você precisar sentar pra ensinar</p></div>
+    <div class="topic reveal"><span class="ic">🦉</span><p>Através do método da Gabarito, com +200 alunos</p></div>
+  </div>
+</section>
+
+<section class="s"><span class="num">03</span>
+  <div class="auth">
+    <div class="authbrand reveal"><span class="owl">🦉</span><b>GABARITO</b><span>EDUCAÇÃO</span></div>
+    <div>
+      <h2 class="disp reveal" style="margin-bottom:6px">Referência em <span class="gold">Salvador</span>.</h2>
+      <ul class="b reveal">
+        <li>Mais de 200 alunos já passaram pela Gabarito.</li>
+        <li>96% de aprovação entre alunos que chegaram em recuperação.</li>
+        <li>87% melhoraram as notas em até 60 dias.</li>
+        <li>Mais de 20 professores e mais de 800 aulas dadas.</li>
+        <li>Método próprio, validado no presencial há anos.</li>
+      </ul>
+      <span class="badge reveal">Gabarito Educação · Salvador · Online</span>
+    </div>
+  </div>
+</section>
+
+<section class="s"><span class="num">04</span>
+  <div class="kick reveal">Resultado de aluno</div>
+  <h2 class="disp reveal">O que a gente já fez por um <span class="gold">aluno</span>.</h2>
+  <div class="slot reveal">[SLOT] inserir resultado de aluno (boletim antes/depois, print de evolução ou depoimento da mãe).</div>
+</section>
+
+<section class="s"><span class="num">05</span>
+  <div class="kick reveal">Resultado de aluno</div>
+  <h2 class="disp reveal">E por <span class="gold">outro</span>.</h2>
+  <div class="slot reveal">[SLOT] inserir mais um resultado de aluno (outro boletim antes/depois ou depoimento).</div>
+</section>
+
+<section class="s"><span class="num">06</span>
+  <div class="kick reveal">A Gabarito por dentro</div>
+  <h2 class="disp reveal">Anos de sala de <span class="gold">aula</span>.</h2>
+  <div class="slot reveal">[SLOT] inserir fotos de aulas nas escolas, da equipe ou de palestras.</div>
+</section>
+
+<section class="s dark"><span class="num">07</span>
+  <div class="kick red reveal">O cenário da educação hoje</div>
+  <ul class="b x reveal">
+    <li>As crianças não estão conseguindo manter o foco.</li>
+    <li>Competem o tempo todo com as telas.</li>
+    <li>Dificuldade de aprender no ritmo da sala.</li>
+    <li>A escola virou linha de produção.</li>
+    <li>Não entendeu no tempo dela? Já foi pra próxima matéria.</li>
+    <li>O que ficou pra trás vira um buraco de base.</li>
+    <li>Um gap de dois anos atrás derruba a matéria de agora.</li>
+    <li>Nota vermelha que volta todo bimestre.</li>
+    <li>Ele estuda e não rende.</li>
+    <li>E ninguém para pra descobrir onde ele travou.</li>
+  </ul>
+</section>
+
+<section class="s"><span class="num">08</span>
+  <div class="kick reveal">A solução</div>
+  <h2 class="disp reveal">Colocar seu filho num <span class="gold">acompanhamento escolar</span>.</h2>
+  <div class="boxlead reveal">Um acompanhamento que descobre onde ele trava, monta um plano só dele e caminha ao lado dele, pra:</div>
+  <ul class="b reveal">
+    <li>Recuperar as notas de verdade.</li>
+    <li>Fechar o buraco de base que ficou pra trás.</li>
+    <li>Criar uma rotina de estudo própria.</li>
+    <li>Ensinar ele a estudar sozinho.</li>
+    <li>Tirar a cobrança das suas costas.</li>
+  </ul>
+</section>
+
+<section class="s dark"><span class="num">09</span>
+  <div class="kick red reveal">A outra opção</div>
+  <h2 class="disp reveal">Tentar ensinar o seu filho <span class="red">sozinha</span>.</h2>
+  <ul class="b x reveal">
+    <li>Chegar cansada do trabalho e ainda sentar pra ensinar.</li>
+    <li>Estudar antes uma matéria que você nem lembra, só pra conseguir ensinar.</li>
+    <li>Virar a fiscal de nota e brigar todo dia.</li>
+    <li>Sem saber onde ele realmente travou.</li>
+    <li>Tentativa e erro que custa bimestres.</li>
+    <li>E, no fim, a nota não sobe.</li>
+  </ul>
+</section>
+
+<section class="s dark"><span class="num">10</span>
+  <div class="kick red reveal">Os riscos</div>
+  <h2 class="disp reveal">Fazer isso sozinha, sem <span class="red">conhecimento</span>.</h2>
+  <div class="grid6">
+    <div class="cell risk reveal"><div class="ci">⏳</div><h4>Perder tempo</h4><p>Meses tentando o que um método resolve rápido.</p></div>
+    <div class="cell risk reveal"><div class="ci">😮‍💨</div><h4>Perder a paciência</h4><p>O estudo virando guerra dentro de casa.</p></div>
+    <div class="cell risk reveal"><div class="ci">💔</div><h4>A relação</h4><p>A cobrança afastando você do seu filho.</p></div>
+    <div class="cell risk reveal"><div class="ci">📉</div><h4>A autoestima dele</h4><p>Ele se achando incapaz, e não é.</p></div>
+    <div class="cell risk reveal"><div class="ci">📅</div><h4>O ano dele</h4><p>O buraco crescendo a cada bimestre.</p></div>
+    <div class="cell risk reveal"><div class="ci">💸</div><h4>Dinheiro</h4><p>Aula avulsa que não resolve a raiz.</p></div>
+  </div>
+  <p class="lead reveal" style="margin-top:18px"><b class="red">E, mesmo assim, ele continua dependendo de você.</b></p>
+</section>
+
+<section class="s hot"><span class="num">11</span>
+  <div class="kick reveal">Imagina</div>
+  <div class="grid6">
+    <div class="cell reveal"><div class="ci">🦉</div><h4>Autônomo nos estudos</h4><p>Ele estuda sozinho, no ritmo dele.</p></div>
+    <div class="cell reveal"><div class="ci">📘</div><h4>Método comprovado</h4><p>Sabe COMO estudar qualquer matéria.</p></div>
+    <div class="cell reveal"><div class="ci">🎯</div><h4>Dono da própria vida</h4><p>Leva essa autonomia pra além da escola.</p></div>
+    <div class="cell reveal"><div class="ci">🚀</div><h4>Aprende qualquer coisa</h4><p>A habilidade de estudar fica pra sempre.</p></div>
+    <div class="cell reveal"><div class="ci">📈</div><h4>Notas recuperadas</h4><p>Sem susto no boletim.</p></div>
+    <div class="cell reveal"><div class="ci">🕊️</div><h4>Você livre</h4><p>Sem cobrança, sem briga em casa.</p></div>
+  </div>
+  <div class="qbar reveal"><span class="q">❓</span> Quanto valeria isso pra você?</div>
+</section>
+
+<section class="s"><span class="num">12</span>
+  <div class="kick reveal">De onde ele está pra onde chega</div>
+  <div class="ab">
+    <div class="col b1 reveal"><h4>Hoje</h4><ul>
+      <li>Travado, nota vermelha.</li><li>Dependente de você.</li><li>Você exausta.</li><li>Futuro incerto.</li></ul></div>
+    <div class="col b2 reveal"><h4>Onde ele chega</h4><ul>
+      <li>Médias recuperadas.</li><li>Estuda sozinho.</li><li>Dono da própria vida.</li><li>Caminho pras melhores faculdades.</li></ul></div>
+  </div>
+</section>
+
+<section class="s hot"><span class="num">13</span>
+  <h1 class="disp reveal">Seu filho dono da <span class="gold">própria vida</span>.</h1>
+  <p class="lead reveal">Nos estudos e em tudo que ele for aprender daqui pra frente.</p>
+</section>
+
+<section class="s"><span class="num">14</span>
+  <div class="kick reveal">Como a gente faz</div>
+  <h2 class="disp reveal">Nota baixa não se resolve com <span class="red">mais esforço seu</span>.</h2>
+  <p class="lead reveal">Se resolve com um acompanhamento que descobre onde ele trava, monta o plano e ensina ele a andar sozinho. A gente chama de <b class="gold">Ciclo ROTA</b>.</p>
+</section>
+
+<section class="s"><span class="num">15</span>
+  <div class="kick reveal">O sistema</div>
+  <h2 class="disp reveal">O método <span class="gold">Ciclo ROTA</span></h2>
+  <div class="wheel">
+    <div class="spoke reveal" style="grid-area:tl"><b>R · Raio-X</b><p>Descobre onde ele trava: base, método ou foco.</p></div>
+    <div class="spoke reveal" style="grid-area:tr"><b>O · Organização</b><p>Monta o plano de estudo só dele, com metas.</p></div>
+    <div class="hub reveal" style="grid-area:hub">Seu filho<br>no centro</div>
+    <div class="spoke reveal" style="grid-area:bl"><b>T · Treino</b><p>Aulas ao vivo, missões e prática toda semana.</p></div>
+    <div class="spoke reveal" style="grid-area:br"><b>A · Acompanhamento</b><p>Mentor ajustando a rota e relatório pra você.</p></div>
+  </div>
+</section>
+
+<section class="s"><span class="num">16</span>
+  <div class="kick reveal">A jornada do aluno</div>
+  <h2 class="disp reveal">Uma escada até a <span class="gold">autonomia</span>.</h2>
+  <div class="stairs">
+    <div class="step2 reveal"><div class="n2">1</div><b>Raio-X</b><p>Descobrir a lacuna real do seu filho.</p></div>
+    <div class="step2 reveal"><div class="n2">2</div><b>90 dias</b><p>Fechar o buraco de base. Adaptação.</p></div>
+    <div class="step2 reveal"><div class="n2">3</div><b>Evolução</b><p>Notas subindo, rotina firmando.</p></div>
+    <div class="step2 reveal"><div class="n2">4</div><b>Autonomia</b><p>Ele estuda sozinho, dono da própria vida.</p></div>
+  </div>
+</section>
+
+<section class="s hot"><span class="num">17</span>
+  <div style="text-align:center;width:100%">
+    <div class="kick reveal" style="margin-bottom:10px">Apresentamos</div>
+    <h1 class="disp reveal">Mentoria Educacional<br><span class="gold">Gabarito</span></h1>
+    <div class="tag reveal" style="margin:26px auto 0">Programa ROTA · Anual · 100% Online</div>
+  </div>
+</section>
+
+<section class="s"><span class="num">18</span>
+  <div class="kick reveal">No que consiste</div>
+  <h2 class="disp reveal">4 pontos que definem a <span class="gold">mentoria</span></h2>
+  <ul class="b reveal">
+    <li>Diagnóstico e plano só dele.</li>
+    <li>Aulas ao vivo toda semana.</li>
+    <li>Um mentor acompanhando de perto.</li>
+    <li>Você só vendo a evolução todo mês.</li>
+  </ul>
+</section>
+
+<section class="s"><span class="num">19</span>
+  <div class="kick reveal">Entregável · R</div>
+  <h2 class="disp reveal">Raio-X <span class="gold">individual</span></h2>
+  <p class="lead reveal">Antes de ensinar, a gente descobre a lacuna real: base, método ou foco. Diagnóstico completo, com devolutiva pra você.</p>
+  <div class="tag reveal">Valor avulso · R$ 600</div>
+</section>
+
+<section class="s"><span class="num">20</span>
+  <div class="kick reveal">Entregável · O</div>
+  <h2 class="disp reveal">Plano de estudo <span class="gold">personalizado</span></h2>
+  <p class="lead reveal">Metas semanais feitas só pro seu filho, com um Plano de Recuperação de 90 dias pra fechar a base primeiro.</p>
+  <div class="tag reveal">Valor avulso · R$ 900</div>
+</section>
+
+<section class="s"><span class="num">21</span>
+  <div class="kick reveal">Entregável · T</div>
+  <h2 class="disp reveal">Aulas ao vivo <span class="gold">toda semana</span></h2>
+  <p class="lead reveal">Aulas 2x por semana, por faixa de série, o ano inteiro, com professores contratados. Você não precisa dar nenhuma.</p>
+  <div class="tag reveal">Valor avulso · R$ 6.000 no ano</div>
+</section>
+
+<section class="s"><span class="num">22</span>
+  <div class="kick reveal">Entregável · T</div>
+  <h2 class="disp reveal">Plantão de <span class="gold">dúvidas</span></h2>
+  <p class="lead reveal">Toda semana um espaço ao vivo pra ele tirar a dúvida na hora que trava. Não sobra mais pra você.</p>
+  <div class="tag reveal">Valor avulso · R$ 2.400 no ano</div>
+</section>
+
+<section class="s"><span class="num">23</span>
+  <div class="kick reveal">Entregável · T</div>
+  <h2 class="disp reveal">Área de membros <span class="gold">completa</span></h2>
+  <p class="lead reveal">Videoaulas das 8 matérias, listas e banco de questões. Todo o conteúdo que ele precisa, além do acompanhamento, sem depender de você.</p>
+  <div class="tag reveal">Valor avulso · R$ 497</div>
+</section>
+
+<section class="s"><span class="num">24</span>
+  <div class="kick reveal">Entregável · T</div>
+  <h2 class="disp reveal">Missões <span class="gold">semanais</span></h2>
+  <p class="lead reveal">Metas claras de estudo, com o mentor cobrando a entrega no lugar de você. É o que cria a rotina.</p>
+  <div class="tag ghost reveal">Incluso</div>
+</section>
+
+<section class="s"><span class="num">25</span>
+  <div class="kick reveal">Entregável · A</div>
+  <h2 class="disp reveal">Um mentor <span class="gold">só pra ele</span></h2>
+  <p class="lead reveal">Alguém acompanhando seu filho de perto, cobrando presença e missões e ajustando a rota. A cobrança sai das suas costas.</p>
+  <div class="tag reveal">Valor avulso · R$ 3.000 no ano</div>
+</section>
+
+<section class="s"><span class="num">26</span>
+  <div class="kick reveal">Entregável · A</div>
+  <h2 class="disp reveal">Relatório mensal + reunião <span class="gold">bimestral</span></h2>
+  <p class="lead reveal">Todo mês você recebe a evolução dele. A cada bimestre, senta com o mentor. Você para de adivinhar.</p>
+  <div class="tag reveal">Valor avulso · R$ 2.400 no ano</div>
+</section>
+
+<section class="s"><span class="num">27</span>
+  <div class="kick reveal">Entregável</div>
+  <h2 class="disp reveal">Grupo de suporte no <span class="gold">WhatsApp</span></h2>
+  <p class="lead reveal">Um canal direto com o mentor pra tudo que envolve o estudo do seu filho. Onde a família acompanha e é acompanhada de perto.</p>
+  <div class="tag ghost reveal">Incluso</div>
+</section>
+
+<section class="s hot"><span class="num">28</span>
+  <div class="kick reveal">A sua parte nisso tudo</div>
+  <h2 class="disp reveal">Você só precisa <span class="gold">receber o relatório</span>.</h2>
+  <p class="lead reveal">Diagnóstico, plano, aulas, dúvidas, missões e a cobrança, tudo com a gente. Você volta a ser só a mãe e acompanha a evolução do seu filho todo mês.</p>
+</section>
+
+<section class="s"><span class="num">29</span>
+  <div class="kick reveal">Bônus</div>
+  <h2 class="disp reveal">E ainda tem <span class="gold">mais</span>.</h2>
+  <ul class="b reveal">
+    <li>Call de diagnóstico aprofundada logo no começo. <b class="gold">R$ 300</b></li>
+    <li>Masterclass mensal ao vivo (tema específico do momento). <b class="gold">R$ 197</b></li>
+  </ul>
+</section>
+
+<section class="s"><span class="num">30</span>
+  <div class="kick reveal">Quem já vive isso</div>
+  <h2 class="disp reveal">Famílias como a <span class="gold">sua</span>.</h2>
+  <div class="slot reveal">[SLOT] prints de conversas de mães, depoimentos e resultados (em volume, estilo mosaico).</div>
+</section>
+
+<section class="s"><span class="num">31</span>
+  <div class="kick reveal">Se fosse montar isso sozinha</div>
+  <div class="stack reveal">
+    <div class="r"><span>Raio-X individual</span><span>R$ 600</span></div>
+    <div class="r"><span>Plano de estudo personalizado</span><span>R$ 900</span></div>
+    <div class="r"><span>Aulas ao vivo o ano todo</span><span>R$ 6.000</span></div>
+    <div class="r"><span>Plantão de dúvidas (no ano)</span><span>R$ 2.400</span></div>
+    <div class="r"><span>Área de membros (8 matérias)</span><span>R$ 497</span></div>
+    <div class="r"><span>Mentor acompanhando (no ano)</span><span>R$ 3.000</span></div>
+    <div class="r"><span>Relatório mensal + reunião</span><span>R$ 2.400</span></div>
+    <div class="r"><span>Bônus (call + masterclass)</span><span>R$ 497</span></div>
+    <div class="tot"><span>Total avulso por ano</span><span>+ R$ 16.000</span></div>
+  </div>
+</section>
+
+<section class="s"><span class="num">32</span>
+  <div class="kick reveal">Valor não é preço</div>
+  <h2 class="disp reveal">Uma aula particular: <span class="gold">R$ 400 a 800</span> por mês.</h2>
+  <p class="lead reveal">Por matéria. E resolve só o sintoma, uma matéria de cada vez. A mentoria cuida do ano inteiro, de todas, e ainda ensina ele a caminhar sozinho.</p>
+</section>
+
+<section class="s"><span class="num">33</span>
+  <div class="kick reveal">A oferta</div>
+  <div class="price">
+    <div class="big reveal">R$ 8.997</div>
+    <div class="par reveal">o que um ano inteiro dessa mentoria realmente vale.</div>
+  </div>
+</section>
+
+<section class="s dark"><span class="num">34</span>
+  <div class="kick reveal">Por que dá pra ser diferente hoje</div>
+  <h2 class="disp reveal">O preço se move nesta <span class="gold">faixa</span>.</h2>
+  <div class="econ reveal">
+    <div class="cap">Do menor valor ao custo cheio</div>
+    <div class="track"><div class="mark" style="left:90%">Sem fechar · custo cheio</div></div>
+    <div class="ends"><span>Menor valor</span><span>Custo cheio</span></div>
+  </div>
+  <p class="lead reveal">Fazer o diagnóstico do seu filho, montar o plano e conduzir essa reunião com você tem um custo real pra gente. Sem fechar, você fica lá na ponta.</p>
+</section>
+
+<section class="s dark"><span class="num">35</span>
+  <div class="kick reveal">Onde está esse custo</div>
+  <h2 class="disp reveal">Captação, reunião e <span class="gold">follow-up</span>.</h2>
+  <div class="econ reveal">
+    <div class="cap">O que pesa no custo cheio</div>
+    <div class="track"><div class="mark" style="left:90%">Você está aqui</div></div>
+    <div class="ends"><span>Menor valor</span><span>Custo cheio</span></div>
+  </div>
+  <p class="lead reveal">Boa parte do valor é te encontrar, marcar, remarcar e acompanhar até você decidir. Isso pesa no preço final.</p>
+</section>
+
+<section class="s dark"><span class="num">36</span>
+  <div class="kick reveal">A economia de fechar hoje</div>
+  <h2 class="disp reveal">Decidir <span class="gold">agora</span> te desce a faixa.</h2>
+  <div class="econ reveal">
+    <div class="cap">Fechando na call, você desce pra cá</div>
+    <div class="track"><div class="fill"></div><div class="mark" style="left:36%">Fechando agora</div></div>
+    <div class="ends"><span>Menor valor</span><span>Custo cheio</span></div>
+  </div>
+  <p class="lead reveal">Sem nova reunião nem follow-up, o nosso custo cai. Essa economia a gente repassa 100% pra você.</p>
+</section>
+
+<section class="s"><span class="num">37</span>
+  <div class="kick reveal">O preço de tabela</div>
+  <h2 class="disp reveal">O valor normal do <span class="gold">programa anual</span>.</h2>
+  <div class="price" style="margin-top:8px">
+    <div class="big reveal">R$ 5.997</div>
+    <div class="par reveal">ou 12x de R$ 499.</div>
+  </div>
+</section>
+
+<section class="s flush"><span class="num">38</span>
+  <div class="split">
+    <div class="half l">
+      <div class="lbl2 reveal">Preço de tabela</div>
+      <div class="pr reveal" style="text-decoration:line-through;opacity:.75">R$ 5.997</div>
+      <div class="sub2 reveal">12x de R$ 499</div>
+    </div>
+    <div class="half r">
+      <div class="lbl2 reveal">★ Só nesta call</div>
+      <div class="pr reveal">R$ 4.997</div>
+      <div class="sub2 reveal">ou 12x de R$ 416<br>valor protagonista, pra quem decide agora.</div>
+    </div>
+  </div>
+</section>
+
+<section class="s hot"><span class="num">39</span>
+  <div class="logo reveal"><span class="owl">🦉</span><div><b>GABARITO</b> <span>EDUCAÇÃO</span></div></div>
+  <h1 class="disp reveal">Um ano com seu filho <span class="gold">bem cuidado</span>.</h1>
+  <p class="lead reveal">Diagnóstico, plano, aulas, mentor e relatório. E você só acompanhando a evolução dele. É começar hoje.</p>
+</section>
+
+<section class="s"><span class="num">40</span>
+  <div class="kick reveal">Se o anual não couber agora · Semestral</div>
+  <h2 class="disp reveal">A <span class="gold">mesma</span> entrega, por 6 meses.</h2>
+  <ul class="b reveal" style="margin-top:14px">
+    <li>Raio-X, plano de estudo e mentor acompanhando.</li>
+    <li>Aulas ao vivo, plantão e área de membros das 8 matérias.</li>
+    <li>Relatório mensal e reunião bimestral.</li>
+  </ul>
+  <div class="tag reveal">R$ 2.497 · ou 12x de R$ 208</div>
+</section>
+
+<section class="s"><span class="num">41</span>
+  <div class="kick reveal">Ou · Trimestral</div>
+  <h2 class="disp reveal">A <span class="gold">mesma</span> entrega, por 3 meses.</h2>
+  <ul class="b reveal" style="margin-top:14px">
+    <li>Todo o acompanhamento: diagnóstico, plano, aulas e mentor.</li>
+    <li>Área de membros e relatório de evolução pra você.</li>
+    <li>Tempo ideal pra virar uma recuperação.</li>
+  </ul>
+  <div class="tag reveal">R$ 1.497 · ou 12x de R$ 125</div>
+</section>
+
+<section class="s"><span class="num">42</span>
+  <div class="kick reveal">E se ainda não der agora</div>
+  <h2 class="disp reveal">A plataforma de <span class="gold">conteúdos</span> Gabarito.</h2>
+  <p class="lead reveal">O acesso à área de membros com as videoaulas das 8 matérias, listas e banco de questões, pro seu filho começar a estudar sozinho hoje. Ninguém sai daqui sem um caminho.</p>
+  <div class="tag reveal">R$ 997 · ou 12x de R$ 83</div>
+</section>
+
+<section class="s"><span class="num">43</span>
+  <div class="kick reveal">Garantia</div>
+  <h2 class="disp reveal">O risco é <span class="gold">nosso</span>.</h2>
+  <p class="lead reveal">Seguindo o plano, presença nas aulas e missões, se seu filho não recuperar as médias no período, devolvemos o valor. E mais 7 dias incondicionais.</p>
+</section>
+
+<section class="s hot"><span class="num">44</span>
+  <div style="text-align:center;width:100%">
+    <div class="reveal" style="font-size:clamp(70px,14vw,140px);line-height:1">🦉</div>
+    <h1 class="disp reveal" style="font-size:clamp(44px,10vw,120px);margin-top:4px">GABARITO</h1>
+    <div class="reveal" style="font-family:'Archivo';font-weight:800;letter-spacing:.5em;color:var(--gold);font-size:clamp(15px,2.4vw,28px);margin-top:8px">EDUCAÇÃO</div>
+    <p class="lead reveal" style="margin:22px auto 0">Vamos começar a mentoria do seu filho.</p>
+  </div>
+</section>
+
+<script>
+  (function(){
+    var S=[].slice.call(document.querySelectorAll('.s')),prog=document.getElementById('prog'),count=document.getElementById('count'),cur=0;
+    function pad(n){return(n<10?'0':'')+n}
+    if('IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');cur=S.indexOf(e.target);prog.style.width=((cur+1)/S.length*100)+'%';count.textContent=pad(cur+1)+' / '+S.length}})},{threshold:.4});
+      S.forEach(function(x){io.observe(x)});
+    }else{S.forEach(function(x){x.classList.add('on')})}
+    function go(i){i=Math.max(0,Math.min(S.length-1,i));S[i].scrollIntoView({behavior:'smooth'})}
+    document.addEventListener('keydown',function(e){if(['ArrowDown','ArrowRight',' ','PageDown'].indexOf(e.key)>=0){e.preventDefault();go(cur+1)}if(['ArrowUp','ArrowLeft','PageUp'].indexOf(e.key)>=0){e.preventDefault();go(cur-1)}});
+  })();
+</script>
+</body>
+</html>

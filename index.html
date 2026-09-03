@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apresentação Comercial · Gabarito ROTA</title>
+<meta name="description" content="Deck comercial do GABARITO ROTA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-0:#070f22;--navy-1:#0a1630;--navy-2:#0f2247;--navy-3:#193c6f;
+    --blue:#3b82f6;--blue-soft:#96befb;--blue-ink:#193c6f;
+    --gold:#fcc331;--gold-2:#ffe08a;--gold-deep:#e0a614;
+    --white:#ffffff;--paper:#eef3fb;--muted:#a9b8ce;--muted-2:#c9d4e6;
+    --red:#ff5c5c;--red-deep:#8a1c1c;
+    --hair:rgba(255,255,255,.10);--hair-2:rgba(150,190,251,.22);
+    --display:'Bebas Neue','Arial Narrow',sans-serif;--body:'Raleway',Arial,sans-serif;
+    --r-xl:28px;--r-lg:22px;--r-md:16px;--r-sm:12px;
+    --shadow:0 30px 80px rgba(0,0,0,.35);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-snap-type:y mandatory;scroll-behavior:smooth;background:var(--navy-0)}
+  body{font-family:var(--body);color:var(--white);background:var(--navy-0);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+
+  /* ---------- slide base ---------- */
+  section.s{position:relative;min-height:100svh;scroll-snap-align:start;display:flex;flex-direction:column;justify-content:center;padding:9vh clamp(40px,7vw,120px);overflow:hidden;isolation:isolate;
+    background:radial-gradient(1100px 620px at 88% 18%,rgba(59,130,246,.18),transparent 62%),radial-gradient(900px 600px at 10% 100%,rgba(25,60,111,.55),transparent 60%),linear-gradient(135deg,#0d1d3d 0%,#0a1630 55%,#070f22 100%)}
+  section.s::before{content:"";position:absolute;inset:0;z-index:-2;pointer-events:none;opacity:.5;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='112' height='128' viewBox='0 0 56 64'><path d='M28 2 52 16v32L28 62 4 48V16Z' fill='none' stroke='%2396befb' stroke-opacity='.10' stroke-width='.8'/></svg>");
+    background-size:112px 128px;mask-image:radial-gradient(900px 700px at 90% 80%,#000 0,transparent 70%);-webkit-mask-image:radial-gradient(900px 700px at 90% 80%,#000 0,transparent 70%)}
+  section.s .net{position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.9}
+  section.s.warm{background:radial-gradient(900px 640px at 62% 50%,rgba(252,195,49,.20),transparent 62%),radial-gradient(700px 500px at 100% 100%,rgba(59,130,246,.18),transparent 60%),linear-gradient(135deg,#10234a 0%,#0a1630 58%,#070f22 100%)}
+  section.s.alert{background:radial-gradient(900px 620px at 92% 96%,rgba(150,30,30,.42),transparent 62%),radial-gradient(700px 400px at 0% 0%,rgba(30,40,70,.6),transparent 60%),linear-gradient(135deg,#121722 0%,#0a0d15 60%,#06080f 100%)}
+  section.s.alert::before{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='112' height='128' viewBox='0 0 56 64'><path d='M28 2 52 16v32L28 62 4 48V16Z' fill='none' stroke='%23ff5c5c' stroke-opacity='.12' stroke-width='.8'/></svg>")}
+  section.s.space{background:radial-gradient(1200px 700px at 100% 110%,rgba(252,195,49,.28),transparent 55%),radial-gradient(900px 600px at 15% 20%,rgba(25,60,111,.8),transparent 60%),linear-gradient(160deg,#0b1a3a 0%,#070f22 60%,#04070f 100%)}
+  section.s.space::after{content:"";position:absolute;right:-18vw;bottom:-62vh;width:80vw;height:80vw;border-radius:50%;z-index:-1;background:radial-gradient(circle at 35% 30%,#12305e,#070f22 60%);box-shadow:0 0 120px 30px rgba(252,195,49,.18),inset 40px 40px 120px rgba(150,190,251,.15)}
+  .stars{position:absolute;inset:0;z-index:-1;pointer-events:none}
+  .stars i{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;opacity:.55;animation:tw 4s ease-in-out infinite}
+  @keyframes tw{50%{opacity:.15}}
+  .glow{position:absolute;z-index:-1;pointer-events:none;border-radius:50%;filter:blur(90px)}
+
+  section.s.capa{background:linear-gradient(90deg,#070f22 0%,rgba(7,15,34,.92) 30%,rgba(7,15,34,.35) 55%,rgba(7,15,34,0) 75%),url('assets/hero-oficial.png') right center/cover no-repeat,#0a1630}
+  section.s.capa::after{display:none}
+  section.s.capa::before{opacity:.25}
+  section.s.capa .cover{grid-template-columns:1fr}
+  @media(max-width:900px){section.s.capa{background-position:70% center}section.s.capa{background-image:linear-gradient(180deg,rgba(7,15,34,.3),rgba(7,15,34,.92) 70%),url('assets/hero-oficial.png')}}
+
+  /* ---------- chrome ---------- */
+  .brand{position:absolute;top:26px;right:clamp(28px,4vw,64px);z-index:6;display:flex;align-items:center;gap:8px;text-decoration:none}
+  .brand svg{width:22px;height:22px}
+  .brand b{font:800 15px/1 var(--body);letter-spacing:.02em;color:#fff}
+  .brand b small{display:block;font:700 9px/1 var(--body);letter-spacing:.22em;color:var(--blue-soft);margin-top:3px}
+  .num{position:absolute;top:26px;left:clamp(28px,4vw,64px);z-index:6;display:inline-flex;align-items:center;gap:10px;font:400 16px/1 var(--display);letter-spacing:.2em;color:rgba(255,255,255,.72)}
+  .num::after{content:"";width:34px;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--gold),transparent)}
+  .prog{position:fixed;top:0;left:0;height:4px;width:0;z-index:40;background:linear-gradient(90deg,var(--gold),var(--blue-soft));box-shadow:0 0 18px rgba(252,195,49,.5);transition:width .25s}
+  .count{position:fixed;bottom:20px;right:28px;z-index:40;font:400 15px/1 var(--display);letter-spacing:.18em;color:#d5e0ef}
+  .nav-hint{position:fixed;left:26px;bottom:18px;z-index:40;display:flex;gap:8px;align-items:center;color:rgba(255,255,255,.5);font:700 10px/1 var(--body);letter-spacing:.1em;text-transform:uppercase}
+  .nav-hint kbd{width:26px;height:26px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.18);border-radius:8px;background:rgba(6,17,38,.8);font:400 15px/1 var(--display)}
+
+  /* ---------- typography ---------- */
+  .disp{font-family:var(--display);font-weight:400;text-transform:uppercase;line-height:.94;letter-spacing:.012em;text-wrap:balance;max-width:18ch}
+  h1.disp{font-size:clamp(60px,8.6vw,132px)}
+  h2.disp{font-size:clamp(44px,5.6vw,84px)}
+  .kick{display:inline-flex;align-items:center;gap:10px;width:fit-content;margin-bottom:18px;padding:8px 16px 8px 10px;border-radius:999px;border:1px solid var(--hair-2);background:rgba(150,190,251,.08);font:700 clamp(11px,.95vw,13px)/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--blue-soft)}
+  .kick::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 12px var(--gold)}
+  .kick.red{color:#ff9b9b;border-color:rgba(255,92,92,.3);background:rgba(255,92,92,.08)}.kick.red::before{background:var(--red);box-shadow:0 0 12px var(--red)}
+  .lead{font-size:clamp(16px,1.5vw,22px);color:var(--muted-2);max-width:58ch;line-height:1.55;margin-top:20px;font-weight:500}
+  .lead b{color:#fff;font-weight:700}
+  .gold{color:transparent;background:linear-gradient(90deg,var(--gold),var(--gold-2)) no-repeat;background-size:0 100%;-webkit-background-clip:text;background-clip:text;transition:background-size .9s cubic-bezier(.2,.8,.2,1) .3s}
+  .s.on .gold{background-size:100% 100%}
+  .red{color:var(--red)}
+  .center{text-align:center;align-items:center;display:flex;flex-direction:column;width:100%}
+  .center .disp{max-width:22ch}.center .lead{margin-inline:auto}
+
+  /* ---------- buttons / pills ---------- */
+  .btn{display:inline-flex;align-items:center;gap:10px;width:fit-content;margin-top:26px;padding:15px 26px;border-radius:999px;font:800 clamp(13px,1.05vw,16px)/1 var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--blue-ink);
+    background:linear-gradient(90deg,#96befb 2.54%,#fff 41.05%,#96befb 92.3%);box-shadow:rgba(65,124,255,.28) 0 -27px 80px,rgba(65,124,255,.18) 0 -10px 29px,0 12px 30px rgba(0,0,0,.3)}
+  .btn.gd{background:linear-gradient(90deg,var(--gold-deep),var(--gold) 45%,#ffe08a);color:#1a1205;box-shadow:rgba(252,195,49,.28) 0 -27px 80px,0 12px 30px rgba(0,0,0,.3)}
+  .btn.ghost{background:rgba(150,190,251,.10);color:#dbe8ff;border:1px solid var(--hair-2);box-shadow:none}
+  .btn .ic{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+
+  /* ---------- cards ---------- */
+  .card{position:relative;border:1px solid var(--hair-2);border-radius:var(--r-lg);background:linear-gradient(160deg,rgba(150,190,251,.14),rgba(150,190,251,.04) 45%,rgba(255,255,255,.02));box-shadow:var(--shadow);backdrop-filter:blur(8px)}
+  .card::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,.10),transparent 30%);mask:linear-gradient(#000,transparent 55%);-webkit-mask:linear-gradient(#000,transparent 55%)}
+  .card.red{border-color:rgba(255,92,92,.28);background:linear-gradient(160deg,rgba(255,92,92,.14),rgba(255,92,92,.03) 50%,rgba(255,255,255,.02))}
+  .card.goldc{border-color:rgba(252,195,49,.35);background:linear-gradient(160deg,rgba(252,195,49,.18),rgba(252,195,49,.04) 50%,rgba(255,255,255,.02))}
+  .ico{width:54px;height:54px;border-radius:var(--r-md);display:grid;place-items:center;background:linear-gradient(145deg,var(--gold),var(--gold-deep));color:#1a1205;box-shadow:0 10px 24px rgba(252,195,49,.25),inset 0 1px 0 rgba(255,255,255,.5)}
+  .ico svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .ico.blue{background:linear-gradient(145deg,#5b9cff,#2563eb);color:#fff;box-shadow:0 10px 24px rgba(59,130,246,.35)}
+  .ico.red{background:linear-gradient(145deg,#ff7a7a,#c62828);color:#fff;box-shadow:0 10px 24px rgba(255,92,92,.3)}
+  .ico.soft{background:rgba(252,195,49,.12);color:var(--gold);border:1px solid rgba(252,195,49,.4);box-shadow:none}
+  .ico.softred{background:rgba(255,92,92,.12);color:#ff8a8a;border:1px solid rgba(255,92,92,.4);box-shadow:none}
+  .ncircle{width:44px;height:44px;border-radius:50%;flex:none;display:grid;place-items:center;font:400 22px/1 var(--display);color:#fff;background:linear-gradient(145deg,#4f8dff,#1d4ed8);box-shadow:0 8px 22px rgba(59,130,246,.4),inset 0 1px 0 rgba(255,255,255,.35)}
+  .ncircle.g{background:linear-gradient(145deg,var(--gold),var(--gold-deep));color:#1a1205;box-shadow:0 8px 22px rgba(252,195,49,.35)}
+
+  /* topics 3 cards */
+  .topics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:34px;max-width:1100px}
+  .topic{padding:26px 26px 28px;min-height:190px;display:flex;flex-direction:column;justify-content:space-between;gap:18px}
+  .topic p{font-size:clamp(15px,1.3vw,19px);font-weight:600;line-height:1.4;color:#eef3fb}
+
+  /* lists */
+  ul.b{list-style:none;margin-top:22px;max-width:70ch}
+  ul.b li{position:relative;padding:11px 0 11px 40px;font-size:clamp(15px,1.4vw,21px);font-weight:600;line-height:1.35;color:#eef3fb;border-bottom:1px solid var(--hair)}
+  ul.b li:last-child{border-bottom:none}
+  ul.b li::before{content:"";position:absolute;left:0;top:13px;width:24px;height:24px;border-radius:50%;background:linear-gradient(145deg,var(--gold),var(--gold-deep)) ;box-shadow:0 6px 14px rgba(252,195,49,.3)}
+  ul.b li::after{content:"";position:absolute;left:7px;top:19px;width:9px;height:5px;border-left:2.4px solid #1a1205;border-bottom:2.4px solid #1a1205;transform:rotate(-45deg)}
+  ul.b.x li::before{background:linear-gradient(145deg,#ff7a7a,#c62828);box-shadow:0 6px 14px rgba(255,92,92,.3)}
+  ul.b.x li::after{width:9px;height:9px;left:7.5px;top:20px;border:0;transform:none;background:linear-gradient(#fff,#fff) center/100% 2.2px no-repeat,linear-gradient(#fff,#fff) center/2.2px 100% no-repeat;transform:rotate(45deg)}
+  ul.b.two{max-width:100%;columns:2;column-gap:48px}
+  ul.b.two li{break-inside:avoid}
+
+  /* two-col layout */
+  .two-col{display:grid;grid-template-columns:1.05fr .95fr;gap:5vw;align-items:center}
+  .two-col.rev{grid-template-columns:.95fr 1.05fr}
+  .visual{position:relative}
+
+  /* authority */
+  .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:26px;max-width:640px}
+  .stat{padding:20px 22px}
+  .stat b{display:block;font:400 clamp(40px,3.8vw,56px)/1 var(--display);color:var(--gold)}
+  .stat span{display:block;margin-top:6px;font-size:14px;font-weight:600;color:var(--muted-2);line-height:1.35}
+  .photo-card{position:relative;border-radius:var(--r-xl);overflow:hidden;border:1px solid var(--hair-2);box-shadow:var(--shadow);background:#0a1630}
+  .photo-card img{width:100%;height:100%;object-fit:cover}
+  .photo-card .cap{position:absolute;left:0;right:0;bottom:0;padding:22px;background:linear-gradient(180deg,transparent,rgba(7,15,34,.92));display:flex;align-items:center;gap:12px}
+  .photo-card .cap b{font:400 22px/1 var(--display);letter-spacing:.06em}
+  .photo-card .cap small{font:600 11px/1.3 var(--body);color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+  .seal{position:absolute;top:18px;right:18px;padding:8px 14px;border-radius:999px;background:var(--gold);color:#1a1205;font:800 11px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;box-shadow:0 8px 20px rgba(0,0,0,.3)}
+
+  /* proof phone */
+  .proof{display:grid;grid-template-columns:1fr auto;gap:5vw;align-items:center}
+  .phone{width:min(330px,26vw);aspect-ratio:9/18.5;border-radius:44px;padding:12px;background:linear-gradient(160deg,#2a3448,#0b1120);box-shadow:0 40px 90px rgba(0,0,0,.5),inset 0 0 0 2px rgba(255,255,255,.08);position:relative}
+  .phone::before{content:"";position:absolute;top:22px;left:50%;transform:translateX(-50%);width:34%;height:22px;border-radius:999px;background:#05070f;z-index:2}
+  .phone .screen{height:100%;border-radius:34px;overflow:hidden;background:linear-gradient(180deg,#0f2247,#0a1630);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:28px 22px;text-align:center;border:1px dashed rgba(252,195,49,.45)}
+  .phone .screen span{font:400 15px/1 var(--display);letter-spacing:.2em;color:var(--gold)}
+  .phone .screen b{font:400 clamp(26px,2.4vw,34px)/1 var(--display);text-transform:uppercase}
+  .phone .screen small{font:600 12px/1.45 var(--body);color:var(--muted)}
+  .phone .screen .ico{margin-bottom:6px}
+
+  /* photo grid tilted */
+  .polas{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:34px;max-width:1120px;align-items:end}
+  .pola{border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--hair-2);box-shadow:var(--shadow);background:#0a1630;transform:rotate(-2.5deg) translateY(10px);transition:transform .9s cubic-bezier(.2,.75,.15,1),opacity .8s}
+  .pola:nth-child(2){transform:rotate(1.5deg) translateY(-14px)}.pola:nth-child(3){transform:rotate(3deg) translateY(6px)}
+  .pola img{width:100%;aspect-ratio:4/4.6;object-fit:cover;filter:saturate(.9) contrast(1.05)}
+  .pola i{display:block;padding:12px 16px;font:400 15px/1 var(--display);letter-spacing:.14em;color:var(--gold);border-top:1px solid var(--hair)}
+
+  /* risks hex ring */
+  .hexwrap{position:relative;width:min(1040px,78vw,2.4*44vh);aspect-ratio:2.4/1;margin:6px auto 0}
+  .hexring{position:absolute;left:29.1667%;top:0;width:41.6667%;height:100%}
+  .hex{position:absolute;width:31%;aspect-ratio:1/1.12;display:grid;place-items:center;color:#fff;
+    background:linear-gradient(160deg,#ff6b6b,#b71c1c);clip-path:polygon(50% 0,96% 25%,96% 75%,50% 100%,4% 75%,4% 25%);filter:drop-shadow(0 12px 26px rgba(255,92,92,.35));
+    transform:scale(.6);opacity:0;transition:transform .7s cubic-bezier(.2,.8,.2,1.2),opacity .5s}
+  .s.on .hex{transform:none;opacity:1}
+  .s.on .hex:nth-child(1){transition-delay:.15s}.s.on .hex:nth-child(6){transition-delay:.3s}.s.on .hex:nth-child(5){transition-delay:.45s}.s.on .hex:nth-child(2){transition-delay:.6s}.s.on .hex:nth-child(3){transition-delay:.75s}.s.on .hex:nth-child(4){transition-delay:.9s}
+  .hex svg{width:42%;height:42%;stroke:#fff;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+  .hex.c{background:linear-gradient(160deg,#fff3c4,#fcc331);color:#1a1205;left:34.5%;top:33%;width:31%;filter:drop-shadow(0 0 30px rgba(252,195,49,.6))}
+  .hex.c svg{stroke:#1a1205;width:46%;height:46%}
+  .hex:nth-child(1){left:34.5%;top:0}.hex:nth-child(2){left:64%;top:16.5%}.hex:nth-child(3){left:64%;top:50%}.hex:nth-child(4){left:34.5%;top:66.5%}.hex:nth-child(5){left:5%;top:50%}.hex:nth-child(6){left:5%;top:16.5%}
+  .hexlines{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+  .hexlines line{stroke:rgba(255,120,120,.75);stroke-width:.35;stroke-dasharray:60;stroke-dashoffset:60;transition:stroke-dashoffset 1s ease}
+  .hexlines circle{fill:#ff7a7a;r:.9;opacity:0;transition:opacity .4s}
+  .s.on .hexlines line{stroke-dashoffset:0}.s.on .hexlines circle{opacity:1}
+  .s.on .hexlines .d1{transition-delay:.55s}.s.on .hexlines .d2{transition-delay:.7s}.s.on .hexlines .d3{transition-delay:.85s}.s.on .hexlines .d4{transition-delay:1s}.s.on .hexlines .d5{transition-delay:1.15s}.s.on .hexlines .d6{transition-delay:1.3s}
+  .hexlbl{position:absolute;width:24%;font:800 clamp(15px,1.3vw,20px)/1.2 var(--body);color:#fff;transform:translateY(-50%);opacity:0;transition:opacity .6s ease}
+  .s.on .hexlbl{opacity:1}
+  .s.on .hexlbl.l1{transition-delay:.7s}.s.on .hexlbl.l2{transition-delay:.85s}.s.on .hexlbl.l3{transition-delay:1s}.s.on .hexlbl.r1{transition-delay:1.15s}.s.on .hexlbl.r2{transition-delay:1.3s}.s.on .hexlbl.r3{transition-delay:1.45s}
+  .hexlbl small{display:block;font:500 clamp(12px,.95vw,14px)/1.35 var(--body);color:var(--muted);margin-top:4px;text-transform:none;letter-spacing:0}
+  .hexlbl.l{right:73.5%;text-align:right}.hexlbl.r{left:73.5%}
+  .hexlbl.l1{top:9%}.hexlbl.l2{top:34%}.hexlbl.l3{top:67.4%}.hexlbl.r1{top:34%}.hexlbl.r2{top:67.4%}.hexlbl.r3{top:91%}
+
+  /* imagine grid */
+  .panel{position:relative;margin-top:26px;padding:34px 36px 40px;border-radius:var(--r-xl);max-width:1140px}
+  .panel::after{content:"";position:absolute;left:0;right:0;top:0;height:6px;border-radius:var(--r-xl) var(--r-xl) 0 0;background:linear-gradient(90deg,var(--gold),var(--blue-soft) 60%,#fff)}
+  .grid6{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+  .cell{padding:22px 24px;border-radius:var(--r-md);border:1px solid var(--hair);background:rgba(255,255,255,.02);display:flex;flex-direction:column;gap:14px}
+  .cell h4{font:400 clamp(20px,1.6vw,26px)/1 var(--display);letter-spacing:.04em;color:var(--gold)}
+  .cell.risk h4{color:#ff8a8a}
+  .cell p{font-size:14.5px;color:var(--muted-2);line-height:1.45;font-weight:500}
+  .qbar{display:inline-flex;align-items:center;gap:14px;margin:26px auto 0;padding:12px 28px 12px 12px;border-radius:999px;background:linear-gradient(90deg,var(--gold),#ffd866);color:#1a1205;font:800 clamp(16px,1.5vw,22px)/1 var(--body);box-shadow:0 14px 40px rgba(252,195,49,.35)}
+  .qbar .q{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:#1a1205;color:var(--gold);font:400 24px/1 var(--display)}
+
+  /* a -> b */
+  .ab{display:grid;grid-template-columns:1fr 84px 1fr;gap:20px;margin-top:26px;align-items:stretch;max-width:1140px}
+  .ab .col{padding:30px 32px;border-radius:var(--r-xl)}
+  .ab h4{display:flex;align-items:center;gap:14px;font:400 clamp(28px,2.6vw,38px)/1 var(--display);margin-bottom:16px}
+  .ab .big{font:400 clamp(56px,5.5vw,80px)/1 var(--display)}
+  .ab .col.b1 h4{color:#ff8a8a}.ab .col.b2 h4{color:var(--gold)}
+  .ab ul{list-style:none}.ab li{padding:9px 0;font-size:clamp(15px,1.35vw,19px);font-weight:600;border-bottom:1px solid var(--hair)}.ab li:last-child{border:0}
+  .ab .arrow{display:grid;place-items:center}
+  .ab .arrow svg{width:56px;height:56px;stroke:var(--gold);fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 16px rgba(252,195,49,.6))}
+
+  /* ROTA wheel */
+  .rota{display:grid;grid-template-columns:1fr auto 1fr;gap:28px;align-items:center;margin-top:12px}
+  .wheel{position:relative;width:min(520px,40vw);aspect-ratio:1}
+  .wheel svg{width:100%;height:100%;overflow:visible}
+  .wheel .seg{fill:url(#segfill);stroke:var(--gold);stroke-width:3;filter:drop-shadow(0 0 14px rgba(252,195,49,.45));transform-origin:50% 50%;transition:transform 1s cubic-bezier(.2,.75,.15,1),opacity .8s;opacity:0;transform:scale(.6) rotate(-20deg)}
+  .s.on .wheel .seg{opacity:1;transform:none}
+  .s.on .wheel .seg:nth-of-type(2){transition-delay:.12s}.s.on .wheel .seg:nth-of-type(3){transition-delay:.24s}.s.on .wheel .seg:nth-of-type(4){transition-delay:.36s}
+  .wheel text{font-family:var(--display);fill:#fff;text-anchor:middle;dominant-baseline:middle}
+  .wheel .lt{font-size:54px;fill:var(--gold)}.wheel .sb{font-size:15px;letter-spacing:.06em;fill:#eef3fb}
+  .wheel .hub{fill:#0a1630;stroke:var(--gold);stroke-width:3}
+  .wheel .hubt{font-size:30px;letter-spacing:.06em}.wheel .hubs{font-size:16px;letter-spacing:.2em;fill:var(--gold)}
+  .wheel .ring{fill:none;stroke:rgba(150,190,251,.35);stroke-width:1;stroke-dasharray:3 9;animation:spin 40s linear infinite;transform-origin:50% 50%}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .spokes{display:flex;flex-direction:column;gap:18px}
+  .spoke{padding:18px 22px;display:flex;gap:16px;align-items:flex-start}
+  .spoke .l{width:46px;height:46px;flex:none;border-radius:var(--r-sm);display:grid;place-items:center;font:400 28px/1 var(--display);color:#1a1205;background:linear-gradient(145deg,var(--gold),var(--gold-deep))}
+  .spoke b{display:block;font:400 22px/1 var(--display);letter-spacing:.05em;margin-bottom:5px}
+  .spoke p{font-size:14px;color:var(--muted-2);line-height:1.45;font-weight:500}
+
+  /* stairs */
+  .stairs{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px;max-width:1140px;align-items:end}
+  .step{padding:22px 22px 24px;border-radius:var(--r-lg);display:flex;flex-direction:column;justify-content:flex-end;gap:8px;transform-origin:bottom;transition:transform .9s cubic-bezier(.2,.75,.15,1),opacity .6s;opacity:0;transform:scaleY(.2)}
+  .s.on .step{opacity:1;transform:none}
+  .s.on .step:nth-child(2){transition-delay:.12s}.s.on .step:nth-child(3){transition-delay:.24s}.s.on .step:nth-child(4){transition-delay:.36s}
+  .step:nth-child(1){min-height:170px}.step:nth-child(2){min-height:230px}.step:nth-child(3){min-height:290px}.step:nth-child(4){min-height:350px;border-color:rgba(252,195,49,.5)}
+  .step b{font:400 24px/1 var(--display);letter-spacing:.05em}
+  .step p{font-size:14px;color:var(--muted-2);line-height:1.45;font-weight:500}
+  .step .ncircle{margin-bottom:auto}
+
+  /* points numbered */
+  .points{display:grid;grid-template-columns:.7fr 1.3fr;gap:5vw;align-items:center}
+  .points .big{font:400 clamp(40px,4.4vw,66px)/.98 var(--display);text-transform:uppercase}
+  .plist{display:flex;flex-direction:column;gap:14px}
+  .pitem{display:flex;align-items:center;gap:18px;padding:16px 22px;border-radius:999px}
+  .pitem p{font-size:clamp(15px,1.35vw,19px);font-weight:600}
+
+  /* deliverable */
+  .deliv{display:grid;grid-template-columns:1.05fr .95fr;gap:4vw;align-items:center}
+  .deliv .visual{display:grid;place-items:center}
+  .bigico{position:relative;width:min(380px,30vw);aspect-ratio:1;border-radius:36px;display:grid;place-items:center;background:linear-gradient(160deg,rgba(150,190,251,.16),rgba(150,190,251,.03));border:1px solid var(--hair-2);box-shadow:var(--shadow);overflow:hidden}
+  .bigico::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 40%,rgba(252,195,49,.28),transparent 60%)}
+  .bigico::after{content:"";position:absolute;inset:14%;border-radius:50%;border:1px dashed rgba(252,195,49,.35);animation:spin 30s linear infinite}
+  .bigico svg{position:relative;width:44%;height:44%;stroke:var(--gold);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 14px 30px rgba(252,195,49,.35))}
+  .bigico .tag{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);padding:8px 16px;border-radius:999px;background:rgba(7,15,34,.8);border:1px solid var(--hair-2);font:400 15px/1 var(--display);letter-spacing:.18em;color:var(--blue-soft);white-space:nowrap}
+  .mock{width:100%;max-width:760px;filter:drop-shadow(0 34px 54px rgba(0,0,0,.5));clip-path:inset(0 100% 0 0);transition:clip-path 1s cubic-bezier(.2,.75,.15,1) .2s}
+  .s.on .mock{clip-path:inset(0)}
+  .mock.framed{padding:12px;border-radius:var(--r-lg);border:1px solid var(--hair-2);background:linear-gradient(160deg,rgba(150,190,251,.16),rgba(255,255,255,.02))}
+  .mock.framed img{border-radius:12px}
+  .value{display:inline-flex;align-items:center;gap:10px;margin-top:24px;padding:12px 20px;border-radius:999px;border:1px solid rgba(252,195,49,.5);background:rgba(252,195,49,.10);color:var(--gold);font:400 clamp(17px,1.4vw,22px)/1 var(--display);letter-spacing:.08em}
+  .value::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold)}
+  .value.inc{border-color:var(--hair-2);background:rgba(150,190,251,.1);color:#dbe8ff}.value.inc::before{background:var(--blue-soft)}
+
+  /* bonus */
+  .bonus{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:30px;max-width:980px}
+  .bonus .card{padding:28px;display:flex;gap:20px;align-items:center}
+  .bonus b.t{display:block;font:600 clamp(16px,1.4vw,20px)/1.35 var(--body);color:#fff}
+  .bonus b.v{display:block;margin-top:8px;font:400 30px/1 var(--display);color:var(--gold)}
+
+  /* testimonials */
+  .testis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:26px;max-width:1140px}
+  .testi{position:relative;display:block;overflow:hidden;border-radius:var(--r-lg);border:1px solid var(--hair-2);background:#071329;text-decoration:none;color:#fff;box-shadow:var(--shadow)}
+  .testi img{width:100%;aspect-ratio:9/13;max-height:46vh;object-fit:cover;object-position:center;transition:transform .5s}
+  .testi:hover img{transform:scale(1.04)}
+  .testi span{display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:14px 16px;font:400 21px/1 var(--display);letter-spacing:.05em}
+  .testi small{font:600 10px/1.2 var(--body);color:var(--muted);text-align:right;letter-spacing:.04em}
+  .testi .play{position:absolute;left:50%;top:42%;width:52px;height:52px;transform:translate(-50%,-50%);border-radius:50%;background:var(--gold);display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.45)}
+  .testi .play::after{content:"";margin-left:4px;border-left:16px solid #1a1205;border-top:10px solid transparent;border-bottom:10px solid transparent}
+
+  /* stack */
+  .stack{margin-top:16px;max-width:900px;padding:8px 32px 28px}
+  .stack .r{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 0;border-bottom:1px solid var(--hair);font-size:clamp(14px,1.25vw,17px);font-weight:600}
+  .stack .r span:last-child{font:400 24px/1 var(--display);color:var(--gold);white-space:nowrap}
+  .stack .tot{display:flex;justify-content:space-between;align-items:center;margin-top:16px;padding:18px 22px;border-radius:var(--r-md);background:linear-gradient(90deg,rgba(252,195,49,.18),rgba(252,195,49,.06));border:1px solid rgba(252,195,49,.4)}
+  .stack .tot span:first-child{font:400 clamp(20px,1.7vw,26px)/1 var(--display);letter-spacing:.05em}
+  .stack .tot span:last-child{font:400 clamp(40px,4vw,62px)/1 var(--display);color:var(--gold)}
+
+  /* price */
+  .price{margin-top:14px}
+  .price .big{font:400 clamp(96px,16vw,230px)/.9 var(--display);color:var(--gold);letter-spacing:.01em;text-shadow:0 0 80px rgba(252,195,49,.25)}
+  .price .par{font:600 clamp(18px,1.8vw,26px)/1.3 var(--body);margin-top:14px;color:var(--muted-2)}
+
+  /* economy track */
+  .econ{margin-top:34px;max-width:900px}
+  .econ .cap{display:inline-block;margin-bottom:70px;padding:8px 14px;border-radius:999px;background:rgba(252,195,49,.12);border:1px solid rgba(252,195,49,.4);color:var(--gold);font:700 12px/1 var(--body);letter-spacing:.12em;text-transform:uppercase}
+  .econ .track{position:relative;height:40px;border-radius:999px;background:rgba(255,255,255,.10);border:1px solid var(--hair)}
+  .econ .track::before,.econ .track::after{content:"";position:absolute;top:-14px;bottom:-14px;width:3px;border-radius:2px;background:var(--blue-soft)}
+  .econ .track::before{left:0}.econ .track::after{right:0}
+  .econ .fill{position:absolute;left:0;top:0;bottom:0;width:36%;border-radius:999px;background:repeating-linear-gradient(90deg,var(--blue) 0 10px,#1d4ed8 10px 20px);transform:scaleX(0);transform-origin:left;transition:transform 1.1s cubic-bezier(.2,.8,.2,1) .35s}
+  .s.on .econ .fill{transform:scaleX(1)}
+  .econ .mark{position:absolute;top:-58px;transform:translateX(-50%);padding:8px 14px;border-radius:999px;background:var(--gold);color:#1a1205;font:800 12px/1 var(--body);letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+  .econ .mark::after{content:"";position:absolute;left:50%;top:100%;transform:translateX(-50%);border-top:8px solid var(--gold);border-left:7px solid transparent;border-right:7px solid transparent}
+  .econ.solo{margin:0 auto;width:100%;max-width:1080px}
+  .econ.solo .cap{font-size:14px;padding:10px 18px;margin-bottom:84px}
+  .econ.solo .track{height:52px}
+  .econ.solo .mark{top:-64px;font-size:14px;padding:10px 18px}
+  .econ.solo .ends{font-size:26px;margin-top:22px}
+  .econ .fill.dots{background:radial-gradient(circle,var(--blue-soft) 3px,transparent 3.6px) 10px 50%/20px 100% repeat-x rgba(59,130,246,.10)}
+  .econ .ends{display:flex;justify-content:space-between;margin-top:18px;font:400 20px/1 var(--display);letter-spacing:.1em;color:var(--blue-soft)}
+
+  /* split */
+  section.s.flush{padding:0}
+  .split{display:grid;grid-template-columns:1fr 1fr;min-height:100svh}
+  .split .half{padding:10vh 6vw;display:flex;flex-direction:column;justify-content:center;position:relative}
+  .split .l{background:linear-gradient(135deg,#0a1630,#04070f)}
+  .split .r{background:radial-gradient(800px 500px at 90% 10%,rgba(252,195,49,.35),transparent 60%),linear-gradient(145deg,#2a5fb8,#193c6f 55%,#0a1630)}
+  .split .lbl{font:400 clamp(20px,1.8vw,26px)/1 var(--display);letter-spacing:.14em;color:var(--muted);margin-bottom:14px}
+  .split .r .lbl{color:var(--gold)}
+  .split .pr{font:400 clamp(64px,8.5vw,128px)/.92 var(--display)}
+  .split .l .pr{color:#fff}.split .r .pr{color:var(--gold);text-shadow:0 0 60px rgba(252,195,49,.35)}
+  .split .sub{color:var(--muted-2);font-weight:600;margin-top:14px;font-size:clamp(14px,1.4vw,19px);line-height:1.5}
+  .split .r .sub{color:#eef3fb}
+  .split .star{position:absolute;top:8vh;left:6vw;font:400 60px/1 var(--display);color:var(--gold)}
+
+  /* cover */
+  .cover{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:3vw}
+  .cover .lock{display:flex;align-items:center;gap:16px;margin-bottom:26px}
+  .cover .lock svg{width:64px;height:64px}
+  .cover .lock b{font:900 clamp(34px,3.6vw,52px)/1 var(--body);letter-spacing:.01em}
+  .cover .lock b small{display:block;font:800 clamp(14px,1.3vw,18px)/1 var(--body);letter-spacing:.34em;color:var(--blue-soft);margin-top:6px}
+  .cover h1{font-size:clamp(64px,8vw,124px)}
+  .cover .hero{position:relative;display:grid;place-items:center}
+  .cover .hero img.boy{width:min(100%,640px);filter:drop-shadow(0 40px 70px rgba(0,0,0,.55));position:relative;z-index:1}
+  .cover .hero .letters{position:absolute;right:0;top:50%;transform:translateY(-50%);font:400 clamp(160px,22vw,340px)/.8 var(--display);color:transparent;-webkit-text-stroke:2px rgba(252,195,49,.35);letter-spacing:-.02em}
+  .owl{position:absolute;width:clamp(90px,9vw,140px);filter:drop-shadow(0 16px 30px rgba(0,0,0,.45));z-index:2;animation:float 5s ease-in-out infinite}
+  @keyframes float{50%{transform:translateY(-10px)}}
+
+  /* plans */
+  .plan{display:grid;grid-template-columns:1.1fr .9fr;gap:5vw;align-items:center}
+  .plan .card{padding:34px 36px}
+  .plan .card .lbl{font:400 18px/1 var(--display);letter-spacing:.2em;color:var(--blue-soft)}
+  .plan .card .pr{font:400 clamp(60px,6vw,92px)/1 var(--display);color:var(--gold);margin:10px 0 4px}
+  .plan .card .pp{font:600 clamp(15px,1.3vw,19px)/1 var(--body);color:var(--muted-2)}
+  .plan .card ul{margin-top:18px;list-style:none}
+  .plan .card li{padding:8px 0 8px 30px;position:relative;font-size:15px;font-weight:600;color:#eef3fb}
+  .plan .card li::before{content:"";position:absolute;left:0;top:11px;width:18px;height:18px;border-radius:50%;background:var(--gold)}
+  .plan .card li::after{content:"";position:absolute;left:5px;top:15px;width:7px;height:4px;border-left:2px solid #1a1205;border-bottom:2px solid #1a1205;transform:rotate(-45deg)}
+
+  /* guarantee */
+  .guar{display:grid;grid-template-columns:1.05fr .95fr;gap:4vw;align-items:center}
+  .guar img{width:min(460px,34vw);margin:0 auto;mask-image:radial-gradient(circle,#000 58%,transparent 66%);-webkit-mask-image:radial-gradient(circle,#000 58%,transparent 66%);filter:drop-shadow(0 30px 60px rgba(0,0,0,.55));animation:float 6s ease-in-out infinite}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(28px);filter:blur(4px);transition:opacity .7s ease,transform .85s cubic-bezier(.2,.75,.15,1),filter .6s ease}
+  .s.on .reveal{opacity:1;transform:none;filter:none}
+  .s.on .reveal:nth-child(2){transition-delay:.08s}.s.on .reveal:nth-child(3){transition-delay:.16s}.s.on .reveal:nth-child(4){transition-delay:.24s}.s.on .reveal:nth-child(5){transition-delay:.32s}.s.on .reveal:nth-child(6){transition-delay:.4s}.s.on .reveal:nth-child(7){transition-delay:.48s}
+  .stagger>*{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .8s cubic-bezier(.2,.75,.15,1)}
+  .s.on .stagger>*{opacity:1;transform:none}
+  .s.on .stagger>*:nth-child(1){transition-delay:.1s}.s.on .stagger>*:nth-child(2){transition-delay:.2s}.s.on .stagger>*:nth-child(3){transition-delay:.3s}.s.on .stagger>*:nth-child(4){transition-delay:.4s}.s.on .stagger>*:nth-child(5){transition-delay:.5s}.s.on .stagger>*:nth-child(6){transition-delay:.6s}.s.on .stagger>*:nth-child(7){transition-delay:.7s}.s.on .stagger>*:nth-child(8){transition-delay:.8s}.s.on .stagger>*:nth-child(9){transition-delay:.9s}.s.on .stagger>*:nth-child(10){transition-delay:1s}
+  .s.on .pola{transform:rotate(-2.5deg) translateY(0)}.s.on .pola:nth-child(2){transform:rotate(1.5deg) translateY(-24px)}.s.on .pola:nth-child(3){transform:rotate(3deg) translateY(-4px)}
+
+  @media(max-width:900px){
+    section.s{padding:10vh 24px 8vh}
+    .two-col,.two-col.rev,.proof,.deliv,.points,.cover,.plan,.guar,.rota{grid-template-columns:1fr;gap:26px}
+    .topics,.grid6,.testis,.stairs,.bonus{grid-template-columns:1fr 1fr}
+    .polas{grid-template-columns:1fr 1fr}.pola:nth-child(3){display:none}
+    .ab{grid-template-columns:1fr}.ab .arrow svg{transform:rotate(90deg)}
+    .hexwrap{width:min(420px,84vw);aspect-ratio:auto}.hexring{position:relative;left:auto;width:100%;height:auto;aspect-ratio:1}.hexlines{display:none}.hexlbl{position:static;width:auto;text-align:left;transform:none}
+    .hexlbls{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+    ul.b.two{columns:1}.split{grid-template-columns:1fr}.cover .hero .letters{display:none}
+    .wheel{width:min(420px,84vw);margin:0 auto}.stats{grid-template-columns:1fr 1fr}
+    .phone{width:min(280px,70vw);margin:0 auto}.nav-hint{display:none}
+    .bigico{width:min(280px,70vw)}
+  }
+  @media(max-width:560px){.topics,.grid6,.testis,.stairs,.bonus,.stats{grid-template-columns:1fr}.price .big{font-size:22vw}.step{min-height:0!important}}
+  @media(prefers-reduced-motion:reduce){.reveal,.stagger>*,.step,.wheel .seg,.mock{opacity:1!important;transform:none!important;filter:none!important;clip-path:none!important;transition:none!important}.gold{background-size:100% 100%}.econ .fill{transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="prog" id="prog"></div><div class="count" id="count">01</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="segfill" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a5fb8"/><stop offset="1" stop-color="#0f2247"/></linearGradient>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5L20 7"/></symbol>
+    <symbol id="i-scan" viewBox="0 0 24 24"><path d="M3 8V5a2 2 0 0 1 2-2h3M16 3h3a2 2 0 0 1 2 2v3M21 16v3a2 2 0 0 1-2 2h-3M8 21H5a2 2 0 0 1-2-2v-3"/><circle cx="12" cy="12" r="3.5"/><path d="M12 5v2M12 17v2M5 12h2M17 12h2"/></symbol>
+    <symbol id="i-plan" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2.5"/><path d="M8 8h8M8 12h8M8 16h4"/></symbol>
+    <symbol id="i-video" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m10 9 5 3-5 3Z"/></symbol>
+    <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.8.4-1 1-1 1.7M12 17h.01"/></symbol>
+    <symbol id="i-laptop" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="11" rx="2"/><path d="M2 19h20M10 15v4M14 15v4"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></symbol>
+    <symbol id="i-mentor" viewBox="0 0 24 24"><circle cx="10" cy="8" r="4"/><path d="M3 20c.7-4 3.3-6 7-6s6.3 2 7 6"/><path d="m15 11 2 2 4-4"/></symbol>
+    <symbol id="i-report" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M8 16v-4M12 16V8M16 16v-6"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4Z"/><path d="M8 9h8M8 12h5"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="10" width="18" height="11" rx="2"/><path d="M3 10h18M12 10v11M12 10c-3 0-5-1.5-5-3.5S10 4 12 10c2-6 5-5.5 5-3.5S15 10 12 10Z"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="10" r="2.5"/><path d="M2 20c.6-4 3-6 7-6s6.4 2 7 6M15 14.5c3 0 5 1.5 6 5"/></symbol>
+    <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M3 7h15a3 3 0 0 1 3 3v9H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h13"/><path d="M15 12h6v5h-6a2.5 2.5 0 0 1 0-5Z"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 3v14M6 11l6 6 6-6M4 21h16"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2 20 5v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5Z"/><path d="m8.5 12 2.5 2.5 5-5.5"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M3 4h6a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H3ZM21 4h-6a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h7Z"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3 22 20H2Z"/><path d="M12 10v4M12 17h.01"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.3-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.7-7 10-7 10Z"/></symbol>
+    <symbol id="i-brain" viewBox="0 0 24 24"><path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 5 2V6a3 3 0 0 0-2-2ZM15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-5 2V6a3 3 0 0 1 2-2Z"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17 9 11l4 4 8-8M15 7h6v6"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 11 9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1Z"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9Z"/></symbol>
+    <symbol id="i-money" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M6 12h.01M18 12h.01"/></symbol>
+    <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M5 15c-1.5 1.5-2 5-2 5s3.5-.5 5-2M14 4c3-1 6-1 6-1s0 3-1 6c-1 3-6 9-9 9l-4-4c0-3 6-8 8-10Z"/><circle cx="15" cy="9" r="1.5"/></symbol>
+    <symbol id="i-graph" viewBox="0 0 24 24"><path d="M4 20V4M4 20h16"/><path d="m7 15 4-5 3 3 6-7"/></symbol>
+    <symbol id="i-hand" viewBox="0 0 24 24"><path d="M8 12V6a1.5 1.5 0 0 1 3 0v5M11 11V4a1.5 1.5 0 0 1 3 0v7M14 11V5.5a1.5 1.5 0 0 1 3 0V13M17 13v-1a1.5 1.5 0 0 1 3 0v3c0 4-3 6-7 6s-6-2-8-6l-1.5-3a1.5 1.5 0 0 1 2.5-1.5L8 13"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-whats" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.5-2-1-1 1a5 5 0 0 1-3-3l1-1-1-2Z"/></symbol>
+    <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5Z"/></symbol>
+    <symbol id="i-arrowup" viewBox="0 0 24 24"><path d="M5 19 19 5M9 5h10v10"/></symbol>
+  </defs>
+</svg>
+
+<!-- 01 CAPA -->
+<section class="s space capa"><span class="num">01</span>
+  <div class="cover">
+    <div>
+      <div class="lock reveal"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 34 26 50 56 16" fill="none" stroke="#fcc331" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/></svg><b>GABARITO<small>EDU</small></b></div>
+      <h1 class="disp reveal">Mentoria<br>Educacional<br><span class="gold">Gabarito</span></h1>
+      <div class="btn gd reveal">Mentoria Educacional · Programa ROTA</div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 OPORTUNIDADE -->
+<section class="s net"><span class="num">02</span>
+  <div class="kick reveal">A oportunidade</div>
+  <h2 class="disp reveal" style="max-width:24ch">Uma oportunidade de tirar seu filho das <span class="gold">notas vermelhas</span> e torná-lo independente nos estudos.</h2>
+  <div class="topics stagger">
+    <div class="card topic"><div class="ico"><svg><use href="#i-trend"/></svg></div><p>Com foco em recuperar as notas e criar autonomia</p></div>
+    <div class="card topic"><div class="ico blue"><svg><use href="#i-home"/></svg></div><p>Sem você precisar sentar pra ensinar</p></div>
+    <div class="card topic"><div class="ico"><svg><use href="#i-users"/></svg></div><p>Através do método da Gabarito, com +200 alunos</p></div>
+  </div>
+</section>
+
+<!-- 03 AUTORIDADE -->
+<section class="s net"><span class="num">03</span>
+  <div class="two-col rev">
+    <div class="photo-card reveal" style="aspect-ratio:4/4.2;max-height:70vh">
+      <img src="assets/aula-01.png" alt="Professor da Gabarito em aula" style="transform:scale(1.52);transform-origin:50% 66%">
+      <span class="seal">Salvador · Online</span>
+      <div class="cap"><img src="assets/mascote-gabarito.jpg" alt="" style="width:44px;height:44px;border-radius:50%;border:2px solid var(--gold)"><div><b>GABARITO EDU</b><br><small>Método próprio, validado no presencial</small></div></div>
+    </div>
+    <div>
+      <div class="kick reveal">Quem somos</div>
+      <h2 class="disp reveal">Referência em <span class="gold">Salvador</span>.</h2>
+      <div class="stats stagger">
+        <div class="card stat"><b data-count="200" data-prefix="+">+200</b><span>alunos já passaram pela Gabarito.</span></div>
+        <div class="card stat"><b data-count="96" data-suffix="%">96%</b><span>de aprovação entre alunos que chegaram em recuperação.</span></div>
+        <div class="card stat"><b data-count="87" data-suffix="%">87%</b><span>melhoraram as notas em até 60 dias.</span></div>
+        <div class="card stat"><b data-count="800" data-prefix="+">+800</b><span>aulas dadas por mais de 20 professores.</span></div>
+      </div>
+      <p class="lead reveal" style="margin-top:18px">Método próprio, validado no presencial há anos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 04 PROVA 1 -->
+<section class="s net"><span class="num">04</span>
+  <div class="proof">
+    <div>
+      <div class="kick reveal">Resultado de aluno</div>
+      <h2 class="disp reveal">O que a gente já fez por um <span class="gold">aluno</span>.</h2>
+      <p class="lead reveal">Espaço reservado para boletim, evolução ou depoimento validado.</p>
+    </div>
+    <div class="phone reveal"><div class="screen"><div class="ico soft"><svg><use href="#i-report"/></svg></div><span>PROVA 01</span><b>Resultado documentado</b><small>Reservado para boletim, evolução ou depoimento validado.</small></div></div>
+  </div>
+</section>
+
+<!-- 05 PROVA 2 -->
+<section class="s net"><span class="num">05</span>
+  <div class="proof">
+    <div>
+      <div class="kick reveal">Resultado de aluno</div>
+      <h2 class="disp reveal">E por <span class="gold">outro</span>.</h2>
+      <p class="lead reveal">Espaço reservado para boletim, evolução ou depoimento validado.</p>
+    </div>
+    <div class="phone reveal"><div class="screen"><div class="ico soft"><svg><use href="#i-trend"/></svg></div><span>PROVA 02</span><b>Outro resultado real</b><small>Reservado para boletim, evolução ou depoimento validado.</small></div></div>
+  </div>
+</section>
+
+<!-- 06 FOTOS -->
+<section class="s net"><span class="num">06</span>
+  <div class="kick reveal">A Gabarito por dentro</div>
+  <h2 class="disp reveal">Anos de sala de <span class="gold">aula</span>.</h2>
+  <div class="polas" aria-label="Fotos reais de aulas da Gabarito">
+    <figure class="pola"><img src="assets/aula-03.png" alt="Professor da Gabarito explicando conteúdo no quadro"><i>AULA · GABARITO</i></figure>
+    <figure class="pola"><img src="assets/aula-04.png" alt="Professor da Gabarito conduzindo uma aula"><i>AULA · GABARITO</i></figure>
+    <figure class="pola"><img src="assets/aula-07.png" alt="Professor da Gabarito em atividade no quadro"><i>AULA · GABARITO</i></figure>
+  </div>
+</section>
+
+<!-- 07 CENÁRIO -->
+<section class="s alert net"><span class="num">07</span>
+  <div class="kick red reveal">O cenário da educação hoje</div>
+  <ul class="b x two stagger">
+    <li>As crianças não estão conseguindo manter o foco.</li>
+    <li>Competem o tempo todo com as telas.</li>
+    <li>Dificuldade de aprender no ritmo da sala.</li>
+    <li>A escola virou linha de produção.</li>
+    <li>Não entendeu no tempo dela? Já foi pra próxima matéria.</li>
+    <li>O que ficou pra trás vira um buraco de base.</li>
+    <li>Um gap de dois anos atrás derruba a matéria de agora.</li>
+    <li>Nota vermelha que volta todo bimestre.</li>
+    <li>Ele estuda e não rende.</li>
+    <li>E ninguém para pra descobrir onde ele travou.</li>
+  </ul>
+</section>
+
+<!-- 08 SOLUÇÃO -->
+<section class="s net"><span class="num">08</span>
+  <div class="two-col">
+    <div>
+      <div class="kick reveal">A solução</div>
+      <h2 class="disp reveal">Colocar seu filho num <span class="gold">acompanhamento escolar</span>.</h2>
+      <p class="lead reveal">Um acompanhamento que descobre onde ele trava, monta um plano só dele e caminha ao lado dele, pra:</p>
+    </div>
+    <div class="card reveal" style="padding:14px 30px">
+      <ul class="b" style="margin-top:0">
+        <li>Recuperar as notas de verdade.</li>
+        <li>Fechar o buraco de base que ficou pra trás.</li>
+        <li>Criar uma rotina de estudo própria.</li>
+        <li>Ensinar ele a estudar sozinho.</li>
+        <li>Tirar a cobrança das suas costas.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 09 OUTRA OPÇÃO -->
+<section class="s alert net"><span class="num">09</span>
+  <div class="two-col">
+    <div>
+      <div class="kick red reveal">A outra opção</div>
+      <h2 class="disp reveal">Tentar ensinar o seu filho <span class="red">sozinha</span>.</h2>
+    </div>
+    <ul class="b x stagger">
+      <li>Chegar cansada do trabalho e ainda sentar pra ensinar.</li>
+      <li>Estudar antes uma matéria que você nem lembra, só pra conseguir ensinar.</li>
+      <li>Virar a fiscal de nota e brigar todo dia.</li>
+      <li>Sem saber onde ele realmente travou.</li>
+      <li>Tentativa e erro que custa bimestres.</li>
+      <li>E, no fim, a nota não sobe.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 10 RISCOS -->
+<section class="s alert net" style="padding-top:6vh;padding-bottom:6vh"><span class="num">10</span>
+  <div class="center">
+    <div class="kick red reveal">Os riscos</div>
+    <h2 class="disp reveal">Fazer isso sozinha, sem <span class="red">conhecimento</span>.</h2>
+  </div>
+  <div class="hexwrap reveal">
+    <div class="hexring">
+      <div class="hex"><svg><use href="#i-clock"/></svg></div>
+      <div class="hex"><svg><use href="#i-brain"/></svg></div>
+      <div class="hex"><svg><use href="#i-heart"/></svg></div>
+      <div class="hex"><svg><use href="#i-star"/></svg></div>
+      <div class="hex"><svg><use href="#i-cal"/></svg></div>
+      <div class="hex"><svg><use href="#i-money"/></svg></div>
+      <div class="hex c"><svg><use href="#i-alert"/></svg></div>
+    </div>
+    <svg class="hexlines" viewBox="0 0 240 100" preserveAspectRatio="none" aria-hidden="true">
+      <line class="d1" x1="106" y1="9" x2="65" y2="9"/><circle class="d1" cx="106" cy="9"/><circle class="d1" cx="65" cy="9"/>
+      <line class="d2" x1="77" y1="34" x2="65" y2="34"/><circle class="d2" cx="77" cy="34"/><circle class="d2" cx="65" cy="34"/>
+      <line class="d3" x1="77" y1="67.4" x2="65" y2="67.4"/><circle class="d3" cx="77" cy="67.4"/><circle class="d3" cx="65" cy="67.4"/>
+      <line class="d4" x1="163" y1="34" x2="175" y2="34"/><circle class="d4" cx="163" cy="34"/><circle class="d4" cx="175" cy="34"/>
+      <line class="d5" x1="163" y1="67.4" x2="175" y2="67.4"/><circle class="d5" cx="163" cy="67.4"/><circle class="d5" cx="175" cy="67.4"/>
+      <line class="d6" x1="134" y1="91" x2="175" y2="91"/><circle class="d6" cx="134" cy="91"/><circle class="d6" cx="175" cy="91"/>
+    </svg>
+    <div class="hexlbls">
+      <div class="hexlbl l l1">Perder tempo<small>Meses tentando o que um método resolve rápido.</small></div>
+      <div class="hexlbl l l2">Dinheiro<small>Aula avulsa que não resolve a raiz.</small></div>
+      <div class="hexlbl l l3">O ano dele<small>O buraco crescendo a cada bimestre.</small></div>
+      <div class="hexlbl r r1">Perder a paciência<small>O estudo virando guerra dentro de casa.</small></div>
+      <div class="hexlbl r r2">A relação<small>A cobrança afastando você do seu filho.</small></div>
+      <div class="hexlbl r r3">A autoestima dele<small>Ele se achando incapaz, e não é.</small></div>
+    </div>
+  </div>
+  <p class="lead reveal" style="text-align:center;margin:26px auto 0"><b class="red">E, mesmo assim, ele continua dependendo de você.</b></p>
+</section>
+
+<!-- 11 IMAGINA -->
+<section class="s warm net"><span class="num">11</span>
+  <div class="center"><div class="kick reveal">Imagina</div></div>
+  <div class="card panel reveal" style="margin-inline:auto;width:100%">
+    <div class="grid6 stagger">
+      <div class="cell"><div class="ico"><svg><use href="#i-rocket"/></svg></div><h4>Autônomo nos estudos</h4><p>Ele estuda sozinho, no ritmo dele.</p></div>
+      <div class="cell"><div class="ico"><svg><use href="#i-compass"/></svg></div><h4>Método comprovado</h4><p>Sabe COMO estudar qualquer matéria.</p></div>
+      <div class="cell"><div class="ico"><svg><use href="#i-star"/></svg></div><h4>Dono da própria vida</h4><p>Leva essa autonomia pra além da escola.</p></div>
+      <div class="cell"><div class="ico"><svg><use href="#i-book"/></svg></div><h4>Aprende qualquer coisa</h4><p>A habilidade de estudar fica pra sempre.</p></div>
+      <div class="cell"><div class="ico"><svg><use href="#i-trend"/></svg></div><h4>Notas recuperadas</h4><p>Sem susto no boletim.</p></div>
+      <div class="cell"><div class="ico"><svg><use href="#i-heart"/></svg></div><h4>Você livre</h4><p>Sem cobrança, sem briga em casa.</p></div>
+    </div>
+  </div>
+  <div class="center"><div class="qbar reveal"><span class="q">?</span> Quanto valeria isso pra você?</div></div>
+</section>
+
+<!-- 12 HOJE -> ONDE CHEGA -->
+<section class="s net"><span class="num">12</span>
+  <div class="kick reveal">De onde ele está pra onde chega</div>
+  <div class="ab reveal">
+    <div class="card red col b1"><h4><span class="big">a</span> Hoje</h4><ul>
+      <li>Travado, nota vermelha.</li><li>Dependente de você.</li><li>Você exausta.</li><li>Futuro incerto.</li></ul></div>
+    <div class="arrow"><svg viewBox="0 0 24 24"><path d="M3 12h17M14 6l6 6-6 6"/></svg></div>
+    <div class="card goldc col b2"><h4><span class="big">B</span> Onde ele chega</h4><ul>
+      <li>Médias recuperadas.</li><li>Estuda sozinho.</li><li>Dono da própria vida.</li><li>Caminho pras melhores faculdades.</li></ul></div>
+  </div>
+</section>
+
+<!-- 13 BIG -->
+<section class="s space"><span class="num">13</span>
+  <div class="center">
+    <h1 class="disp reveal">Seu filho dono da <span class="gold">própria vida</span>.</h1>
+    <p class="lead reveal">Nos estudos e em tudo que ele for aprender daqui pra frente.</p>
+  </div>
+</section>
+
+<!-- 14 COMO -->
+<section class="s net"><span class="num">14</span>
+  <div class="two-col">
+    <div>
+      <div class="kick reveal">Como a gente faz</div>
+      <h2 class="disp reveal">Nota baixa não se resolve com <span class="red">mais esforço seu</span>.</h2>
+      <p class="lead reveal">Se resolve com um acompanhamento que descobre onde ele trava, monta o plano e ensina ele a andar sozinho. A gente chama de <b class="gold">Ciclo ROTA</b>.</p>
+    </div>
+    <div class="visual reveal" style="display:grid;place-items:center"><div class="bigico"><svg><use href="#i-compass"/></svg><span class="tag">CICLO ROTA</span></div></div>
+  </div>
+</section>
+
+<!-- 15 CICLO ROTA -->
+<section class="s net"><span class="num">15</span>
+  <div class="center"><div class="kick reveal">O sistema</div><h2 class="disp reveal">O método <span class="gold">Ciclo ROTA</span></h2></div>
+  <div class="rota">
+    <div class="spokes stagger">
+      <div class="card spoke"><span class="l">R</span><div><b>Raio-X</b><p>Descobre onde ele trava: base, método ou foco.</p></div></div>
+      <div class="card spoke"><span class="l">O</span><div><b>Organização</b><p>Monta o plano de estudo só dele, com metas.</p></div></div>
+    </div>
+    <div class="wheel reveal">
+      <svg viewBox="0 0 400 400">
+        <circle class="ring" cx="200" cy="200" r="196"/>
+        <path class="seg" d="M200 30 A170 170 0 0 1 370 200 L295 200 A95 95 0 0 0 200 105 Z"/>
+        <path class="seg" d="M370 200 A170 170 0 0 1 200 370 L200 295 A95 95 0 0 0 295 200 Z"/>
+        <path class="seg" d="M200 370 A170 170 0 0 1 30 200 L105 200 A95 95 0 0 0 200 295 Z"/>
+        <path class="seg" d="M30 200 A170 170 0 0 1 200 30 L200 105 A95 95 0 0 0 105 200 Z"/>
+        <text class="lt" x="300" y="96">R</text><text class="sb" x="300" y="132">RAIO-X</text>
+        <text class="lt" x="300" y="284">O</text><text class="sb" x="300" y="320">ORGANIZAÇÃO</text>
+        <text class="lt" x="100" y="284">T</text><text class="sb" x="100" y="320">TREINO</text>
+        <text class="lt" x="100" y="96">A</text><text class="sb" x="100" y="132">ACOMPANHAMENTO</text>
+        <circle class="hub" cx="200" cy="200" r="78"/>
+        <text class="hubt" x="200" y="192">SEU FILHO</text><text class="hubs" x="200" y="222">NO CENTRO</text>
+      </svg>
+    </div>
+    <div class="spokes stagger">
+      <div class="card spoke"><span class="l">T</span><div><b>Treino</b><p>Aulas ao vivo, missões e prática toda semana.</p></div></div>
+      <div class="card spoke"><span class="l">A</span><div><b>Acompanhamento</b><p>Mentor ajustando a rota e relatório pra você.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 16 ESCADA -->
+<section class="s net"><span class="num">16</span>
+  <div class="kick reveal">A jornada do aluno</div>
+  <h2 class="disp reveal">Uma escada até a <span class="gold">autonomia</span>.</h2>
+  <div class="stairs">
+    <div class="card step"><span class="ncircle">1</span><b>Raio-X</b><p>Descobrir a lacuna real do seu filho.</p></div>
+    <div class="card step"><span class="ncircle">2</span><b>90 dias</b><p>Fechar o buraco de base. Adaptação.</p></div>
+    <div class="card step"><span class="ncircle">3</span><b>Evolução</b><p>Notas subindo, rotina firmando.</p></div>
+    <div class="card goldc step"><span class="ncircle g">4</span><b>Autonomia</b><p>Ele estuda sozinho, dono da própria vida.</p></div>
+  </div>
+</section>
+
+<!-- 17 APRESENTAMOS -->
+<section class="s space"><span class="num">17</span>
+  <div class="center">
+    <div class="kick reveal">Apresentamos</div>
+    <div class="reveal" style="display:flex;align-items:center;gap:18px;margin-bottom:10px"><img src="assets/mascote-gabarito.jpg" alt="" style="width:74px;height:74px;border-radius:50%;border:3px solid var(--gold)"><svg viewBox="0 0 24 24" style="width:54px;height:54px;stroke:var(--gold);fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round"><use href="#i-arrowup"/></svg></div>
+    <h1 class="disp reveal">Mentoria Educacional<br><span class="gold">Gabarito</span></h1>
+    <div class="btn gd reveal">Programa ROTA · Anual · 100% Online</div>
+  </div>
+</section>
+
+<!-- 18 4 PONTOS -->
+<section class="s net"><span class="num">18</span>
+  <div class="points">
+    <div>
+      <div class="kick reveal">No que consiste</div>
+      <div class="big reveal">4 pontos<br>que definem<br>a <span class="gold">mentoria</span></div>
+    </div>
+    <div class="plist stagger">
+      <div class="card pitem"><span class="ncircle">1</span><p>Diagnóstico e plano só dele.</p></div>
+      <div class="card pitem"><span class="ncircle">2</span><p>Aulas ao vivo toda semana.</p></div>
+      <div class="card pitem"><span class="ncircle">3</span><p>Um mentor acompanhando de perto.</p></div>
+      <div class="card pitem"><span class="ncircle">4</span><p>Você só vendo a evolução todo mês.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 19 RAIO-X -->
+<section class="s net"><span class="num">19</span>
+  <div class="deliv">
+    <div>
+      <div class="kick reveal">Entregável · R</div>
+      <h2 class="disp reveal">Raio-X <span class="gold">individual</span></h2>
+      <p class="lead reveal">Antes de ensinar, a gente descobre a lacuna real: base, método ou foco. Diagnóstico completo, com devolutiva pra você.</p>
+      <div class="value reveal">Valor avulso · R$ 600</div>
+    </div>
+    <div class="visual reveal"><div class="bigico"><svg><use href="#i-scan"/></svg><span class="tag">DIAGNÓSTICO</span></div></div>
+  </div>
+</section>
+
+<!-- 20 PLANO -->
+<section class="s net"><span class="num">20</span>
+  <div class="deliv">
+    <div>
+      <div class="kick reveal">Entregável · O</div>
+      <h2 class="disp reveal">Plano de estudo <span class="gold">personalizado</span></h2>
+      <p class="lead reveal">Metas semanais feitas só pro seu filho, com um Plano de Recuperação de 90 dias pra fechar a base primeiro.</p>
+      <div class="value reveal">Valor avulso · R$ 900</div>
+    </div>
+    <div class="visual reveal"><div class="bigico"><svg><use href="#i-plan"/></svg><span class="tag">PLANO DE 90 DIAS</span></div></div>
+  </div>
+</section>
+
+<!-- 21 AULAS AO VIVO -->
+<section class="s net"><span class="num">21</span>
+  <div class="deliv">
+    <div>
+      <div class="kick reveal">Entregável · T</div>
+      <h2 class="disp reveal">Aulas ao vivo <span class="gold">toda semana</span></h2>
+      <p class="lead reveal">Aulas 2x por semana, por faixa de série, o ano inteiro, com professores contratados. Você não precisa dar nenhuma.</p>
+      <div class="value reveal">Valor avulso · R$ 6.000 no ano</div>
+    </div>
+    <div class="visual"><img class="mock" src="assets/macbook-area-membros.png" alt="Aula real da plataforma Gabarito com professor e playlist de conteúdos"></div>
+  </div>
+</section>
+
+<!-- 22 PLANTÃO -->
+<section class="s net"><span class="num">22</span>
+  <div class="deliv">
+    <div>
+      <div class="kick reveal">Entregável · T</div>
+      <h2 class="disp reveal">Plantão de <span class="gold">dúvidas</span></h2>
+      <p class="lead reveal">Toda semana um espaço ao vivo pra ele tirar a dúvida na hora que trava. Não sobra mais pra você.</p>
+      <div class="value reveal">Valor avulso · R$ 2.400 no ano</div>
+    </div>
+    <div class="visual reveal"><div class="bigico"><svg><use href="#i-help"/></svg><span class="tag">AO VIVO · SEMANAL</span></div></div>
+  </div>
+</section>
+
+<!-- 23 ÁREA DE MEMBROS -->
+<section class="s net"><span class="num">23</span>
+  <div class="deliv">
+    <div>
+      <div class="kick reveal">Entregável · T</div>
+      <h2 class="disp reveal">Área de membros <span class="gold">completa</span></h2>
+      <p class="lead reveal">Videoaulas das 8 matérias, listas e banco de questões. Todo o conteúdo que ele precisa, além do acompanhamento, sem depender de você.</p>
+      <div class="value reveal">Valor avulso · R$ 497</div>
+    </div>
+    <div class="visual"><img class="mock" src="assets/mockup-plataforma-master.png" alt="Área de membros real da Gabarito em notebooks e tablets"></div>
+  </div>
+</section>
+
+<!-- 24 MISSÕES -->
+<section class="s net"><span class="num">24</span>
+  <div class="deliv">
+    <div>
+      <div class="kick reveal">Entregável · T</div>
+      <h2 class="disp reveal">Missões <span class="gold">semanais</span></h2>
+      <p class="lead reveal">Metas claras de estudo, com o mentor cobrando a entrega no lugar de você. É o que cria a rotina.</p>
+      <div class="value inc reveal">Incluso</div>
+    </div>
+    <div class="visual reveal"><div class="bigico"><svg><use href="#i-target"/></svg><span class="tag">ROTINA</span></div></div>
+  </div>
+</section>
+
+<!-- 25 MENTOR -->
+<section class="s net"><span class="num">25</span>
+  <div class="deliv">
+    <div>
+      <div class="kick reveal">Entregável · A</div>
+      <h2 class="disp reveal">Um mentor <span class="gold">só pra ele</span></h2>
+      <p class="lead reveal">Alguém acompanhando seu filho de perto, cobrando presença e missões e ajustando a rota. A cobrança sai das suas costas.</p>
+      <div class="value reveal">Valor avulso · R$ 3.000 no ano</div>
+    </div>
+    <div class="visual reveal"><div class="bigico"><svg><use href="#i-mentor"/></svg><span class="tag">ACOMPANHAMENTO</span></div></div>
+  </div>
+</section>
+
+<!-- 26 RELATÓRIO -->
+<section class="s net"><span class="num">26</span>
+  <div class="deliv">
+    <div>
+      <div class="kick reveal">Entregável · A</div>
+      <h2 class="disp reveal">Relatório mensal + reunião <span class="gold">bimestral</span></h2>
+      <p class="lead reveal">Todo mês você recebe a evolução dele. A cada bimestre, senta com o mentor. Você para de adivinhar.</p>
+      <div class="value reveal">Valor avulso · R$ 2.400 no ano</div>
+    </div>
+    <div class="visual reveal"><div class="bigico"><svg><use href="#i-report"/></svg><span class="tag">EVOLUÇÃO</span></div></div>
+  </div>
+</section>
+
+<!-- 27 WHATSAPP -->
+<section class="s net"><span class="num">27</span>
+  <div class="deliv">
+    <div>
+      <div class="kick reveal">Entregável</div>
+      <h2 class="disp reveal">Grupo de suporte no <span class="gold">WhatsApp</span></h2>
+      <p class="lead reveal">Um canal direto com o mentor pra tudo que envolve o estudo do seu filho. Onde a família acompanha e é acompanhada de perto.</p>
+      <div class="value inc reveal">Incluso</div>
+    </div>
+    <div class="visual reveal"><div class="bigico"><svg><use href="#i-whats"/></svg><span class="tag">CANAL DIRETO</span></div></div>
+  </div>
+</section>
+
+<!-- 28 SUA PARTE -->
+<section class="s warm"><span class="num">28</span>
+  <div class="center">
+    <div class="kick reveal">A sua parte nisso tudo</div>
+    <h2 class="disp reveal">Você só precisa <span class="gold">receber o relatório</span>.</h2>
+    <p class="lead reveal">Diagnóstico, plano, aulas, dúvidas, missões e a cobrança, tudo com a gente. Você volta a ser só a mãe e acompanha a evolução do seu filho todo mês.</p>
+  </div>
+</section>
+
+<!-- 29 BÔNUS -->
+<section class="s net"><span class="num">29</span>
+  <div class="kick reveal">Bônus</div>
+  <h2 class="disp reveal">E ainda tem <span class="gold">mais</span>.</h2>
+  <div class="bonus stagger">
+    <div class="card goldc"><div class="ico"><svg><use href="#i-gift"/></svg></div><div><b class="t">Call de diagnóstico aprofundada logo no começo.</b><b class="v">R$ 300</b></div></div>
+    <div class="card goldc"><div class="ico"><svg><use href="#i-video"/></svg></div><div><b class="t">Masterclass mensal ao vivo (tema específico do momento).</b><b class="v">R$ 197</b></div></div>
+  </div>
+</section>
+
+<!-- 30 DEPOIMENTOS -->
+<section class="s net"><span class="num">30</span>
+  <div class="kick reveal">Quem já vive isso</div>
+  <h2 class="disp reveal">Famílias como a <span class="gold">sua</span>.</h2>
+  <div class="testis stagger" aria-label="Depoimentos reais de alunos e mães da Gabarito">
+    <a class="testi" href="https://www.youtube.com/watch?v=hcAUQpYw-fc" target="_blank" rel="noopener"><img src="assets/depo-jose.jpg" alt="José, aluno Gabarito"><i class="play"></i><span>José <small>aluno Gabarito</small></span></a>
+    <a class="testi" href="https://www.youtube.com/watch?v=JaS3380JuCI" target="_blank" rel="noopener"><img src="assets/depo-janaina.jpg" alt="Janaína, mãe do aluno José"><i class="play"></i><span>Janaína <small>mãe do José</small></span></a>
+    <a class="testi" href="https://www.youtube.com/watch?v=ion26sMcibk" target="_blank" rel="noopener"><img src="assets/depo-camilla.jpg" alt="Camilla, mãe da aluna Letícia"><i class="play"></i><span>Camilla <small>mãe da Letícia</small></span></a>
+    <a class="testi" href="https://www.youtube.com/watch?v=Lt09w3MpgQ0" target="_blank" rel="noopener"><img src="assets/depo-joaquim.jpg" alt="Joaquim, aluno Gabarito"><i class="play"></i><span>Joaquim <small>aluno Gabarito</small></span></a>
+  </div>
+</section>
+
+<!-- 31 STACK -->
+<section class="s net"><span class="num">31</span>
+  <div class="kick reveal">Se fosse montar isso sozinha</div>
+  <div class="card stack reveal">
+    <div class="r"><span>Raio-X individual</span><span>R$ 600</span></div>
+    <div class="r"><span>Plano de estudo personalizado</span><span>R$ 900</span></div>
+    <div class="r"><span>Aulas ao vivo o ano todo</span><span>R$ 6.000</span></div>
+    <div class="r"><span>Plantão de dúvidas (no ano)</span><span>R$ 2.400</span></div>
+    <div class="r"><span>Área de membros (8 matérias)</span><span>R$ 497</span></div>
+    <div class="r"><span>Mentor acompanhando (no ano)</span><span>R$ 3.000</span></div>
+    <div class="r"><span>Relatório mensal + reunião</span><span>R$ 2.400</span></div>
+    <div class="r"><span>Bônus (call + masterclass)</span><span>R$ 497</span></div>
+    <div class="tot"><span>Total avulso por ano</span><span>+ R$ 16.000</span></div>
+  </div>
+</section>
+
+<!-- 32 AULA PARTICULAR -->
+<section class="s net"><span class="num">32</span>
+  <div class="deliv">
+    <div>
+      <div class="kick reveal">Valor não é preço</div>
+      <h2 class="disp reveal">Uma aula particular: <span class="gold">R$ 400 a 800</span> por mês.</h2>
+      <p class="lead reveal">Por matéria. E resolve só o sintoma, uma matéria de cada vez. A mentoria cuida do ano inteiro, de todas, e ainda ensina ele a caminhar sozinho.</p>
+    </div>
+    <div class="visual reveal"><div class="bigico"><svg><use href="#i-wallet"/></svg><span class="tag">POR MATÉRIA</span></div></div>
+  </div>
+</section>
+
+<!-- 33 OFERTA -->
+<section class="s warm"><span class="num">33</span>
+  <div class="kick reveal">A oferta</div>
+  <div class="price">
+    <div class="big reveal">R$ 8.997</div>
+    <div class="par reveal">o que um ano inteiro dessa mentoria realmente vale.</div>
+  </div>
+</section>
+
+<!-- 34 FAIXA -->
+<section class="s alert net"><span class="num">34</span>
+  <div class="econ solo reveal">
+    <div class="cap">Do menor valor ao custo cheio</div>
+    <div class="track"><div class="mark" style="left:90%">Sem fechar · custo cheio</div></div>
+    <div class="ends"><span>Menor valor</span><span>Custo cheio</span></div>
+  </div>
+</section>
+
+<!-- 35 CUSTO -->
+<section class="s alert net"><span class="num">35</span>
+  <div class="econ solo reveal">
+    <div class="cap">O que pesa no custo cheio</div>
+    <div class="track"><div class="fill dots" style="width:90%"></div><div class="mark" style="left:90%">Você está aqui</div></div>
+    <div class="ends"><span>Menor valor</span><span>Custo cheio</span></div>
+  </div>
+</section>
+
+<!-- 36 ECONOMIA -->
+<section class="s alert net"><span class="num">36</span>
+  <div class="econ solo reveal">
+    <div class="cap">Fechando na call, você desce pra cá</div>
+    <div class="track"><div class="fill"></div><div class="mark" style="left:36%">Fechando agora</div></div>
+    <div class="ends"><span>Menor valor</span><span>Custo cheio</span></div>
+  </div>
+</section>
+
+<!-- 37 TABELA -->
+<section class="s net"><span class="num">37</span>
+  <div class="kick reveal">O preço de tabela</div>
+  <h2 class="disp reveal">O valor normal do <span class="gold">programa anual</span>.</h2>
+  <div class="price">
+    <div class="big reveal">R$ 5.997</div>
+    <div class="par reveal">ou 12x de R$ 499.</div>
+  </div>
+</section>
+
+<!-- 38 SPLIT -->
+<section class="s flush"><span class="num">38</span>
+  <div class="split">
+    <div class="half l">
+      <div class="lbl reveal">Preço de tabela</div>
+      <div class="pr reveal" style="text-decoration:line-through;opacity:.6">R$ 5.997</div>
+      <div class="sub reveal">12x de R$ 499</div>
+    </div>
+    <div class="half r">
+      <span class="star">✱</span>
+      <div class="lbl reveal">Condição desta call</div>
+      <div class="pr reveal">R$ 4.997</div>
+      <div class="sub reveal">ou 12x de R$ 416<br>valor protagonista, pra quem decide agora.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 39 UM ANO -->
+<section class="s space"><span class="num">39</span>
+  <div class="two-col">
+    <div>
+      <div class="reveal" style="display:flex;align-items:center;gap:12px;margin-bottom:20px"><svg viewBox="0 0 64 64" style="width:40px;height:40px"><path d="M10 34 26 50 56 16" fill="none" stroke="#fcc331" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/></svg><b style="font:900 26px/1 var(--body)">GABARITO <span style="color:var(--blue-soft);font-size:14px;letter-spacing:.3em">EDU</span></b></div>
+      <h1 class="disp reveal" style="font-size:clamp(56px,7.4vw,108px);max-width:12ch">Um ano com seu filho <span class="gold">bem cuidado</span>.</h1>
+      <p class="lead reveal">Diagnóstico, plano, aulas, mentor e relatório. E você só acompanhando a evolução dele. É começar hoje.</p>
+    </div>
+    <div class="visual reveal" style="display:grid;place-items:center"><div class="bigico"><svg><use href="#i-cal"/></svg><span class="tag">12 MESES</span></div></div>
+  </div>
+</section>
+
+<!-- 40 SEMESTRAL -->
+<section class="s net"><span class="num">40</span>
+  <div class="plan">
+    <div>
+      <div class="kick reveal">Se o anual não couber agora · Semestral</div>
+      <h2 class="disp reveal">A <span class="gold">mesma</span> entrega, por 6 meses.</h2>
+      <ul class="b reveal" style="margin-top:14px">
+        <li>Raio-X, plano de estudo e mentor acompanhando.</li>
+        <li>Aulas ao vivo, plantão e área de membros das 8 matérias.</li>
+        <li>Relatório mensal e reunião bimestral.</li>
+      </ul>
+    </div>
+    <div class="card goldc reveal"><div class="lbl">PLANO SEMESTRAL</div><div class="pr">R$ 2.497</div><div class="pp">ou 12x de R$ 208</div></div>
+  </div>
+</section>
+
+<!-- 41 TRIMESTRAL -->
+<section class="s net"><span class="num">41</span>
+  <div class="plan">
+    <div>
+      <div class="kick reveal">Ou · Trimestral</div>
+      <h2 class="disp reveal">A <span class="gold">mesma</span> entrega, por 3 meses.</h2>
+      <ul class="b reveal" style="margin-top:14px">
+        <li>Todo o acompanhamento: diagnóstico, plano, aulas e mentor.</li>
+        <li>Área de membros e relatório de evolução pra você.</li>
+        <li>Tempo ideal pra virar uma recuperação.</li>
+      </ul>
+    </div>
+    <div class="card goldc reveal"><div class="lbl">PLANO TRIMESTRAL</div><div class="pr">R$ 1.497</div><div class="pp">ou 12x de R$ 125</div></div>
+  </div>
+</section>
+
+<!-- 42 PLATAFORMA -->
+<section class="s net"><span class="num">42</span>
+  <div class="deliv">
+    <div>
+      <div class="kick reveal">E se ainda não der agora</div>
+      <h2 class="disp reveal">A plataforma de <span class="gold">conteúdos</span> Gabarito.</h2>
+      <p class="lead reveal">O acesso à área de membros com as videoaulas das 8 matérias, listas e banco de questões, pro seu filho começar a estudar sozinho hoje. Ninguém sai daqui sem um caminho.</p>
+      <div class="value reveal">R$ 997 · ou 12x de R$ 83</div>
+    </div>
+    <div class="visual"><img class="mock" src="assets/mockup-notebook-celular.png" alt="Plataforma Gabarito aberta em notebook e celular" style="max-width:560px"></div>
+  </div>
+</section>
+
+<!-- 43 GARANTIA -->
+<section class="s warm"><span class="num">43</span>
+  <div class="guar">
+    <div>
+      <div class="kick reveal">Garantia</div>
+      <h2 class="disp reveal">O risco é <span class="gold">nosso</span>.</h2>
+      <p class="lead reveal">Seguindo o plano, presença nas aulas e missões, se seu filho não recuperar as médias no período, devolvemos o valor. E mais 7 dias incondicionais.</p>
+    </div>
+    <img class="reveal" src="assets/garantia-7-dias-oficial.png" alt="Selo oficial de garantia de 7 dias da Gabarito">
+  </div>
+</section>
+
+<!-- 44 FECHAMENTO -->
+<section class="s space"><span class="num">44</span>
+  <div class="center">
+    <img class="reveal" src="assets/mascote-gabarito.jpg" alt="Mascote coruja da Gabarito" style="width:clamp(110px,12vw,170px);border-radius:50%;border:5px solid var(--gold);box-shadow:0 30px 60px rgba(0,0,0,.5);margin-bottom:22px">
+    <div class="reveal" style="display:flex;align-items:center;gap:16px"><svg viewBox="0 0 64 64" style="width:56px;height:56px"><path d="M10 34 26 50 56 16" fill="none" stroke="#fcc331" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/></svg><b style="font:900 clamp(44px,6vw,84px)/1 var(--body)">GABARITO</b></div>
+    <div class="reveal" style="font:800 clamp(16px,2vw,26px)/1 var(--body);letter-spacing:.5em;color:var(--blue-soft);margin-top:10px">EDU</div>
+    <p class="lead reveal" style="margin-top:26px">Vamos começar a mentoria do seu filho.</p>
+  </div>
+</section>
+
+<script>
+(function(){
+  var S=[].slice.call(document.querySelectorAll('.s')),prog=document.getElementById('prog'),count=document.getElementById('count'),cur=0;
+  function pad(n){return(n<10?'0':'')+n}
+
+  /* brand lockup em todo slide */
+  S.forEach(function(sl,i){
+    var b=document.createElement('a');b.className='brand';b.href='https://gabaritoedu.com.br/';b.target='_blank';b.rel='noopener';
+    b.innerHTML='<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 34 26 50 56 16" fill="none" stroke="#fcc331" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/></svg><b>GABARITO<small>EDU</small></b>';
+    if(i!==0&&i!==S.length-1)sl.appendChild(b);
+  });
+
+  /* rede de nós (fundo estilo referência) */
+  function seeded(s){return function(){s=(s*9301+49297)%233280;return s/233280}}
+  S.forEach(function(sl,i){
+    if(!sl.classList.contains('net'))return;
+    var rnd=seeded(i*7+13),W=1600,H=900,pts=[],n=26;
+    var alert=sl.classList.contains('alert'),c=alert?'#ff5c5c':'#96befb';
+    for(var k=0;k<n;k++){var t=rnd();pts.push({x:W*(.45+.55*Math.pow(rnd(),.7)),y:H*(rnd()),r:1.2+rnd()*2.2})}
+    var svg='<svg class="net" viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="xMidYMid slice" aria-hidden="true">';
+    for(var a=0;a<n;a++)for(var b=a+1;b<n;b++){var dx=pts[a].x-pts[b].x,dy=pts[a].y-pts[b].y,d=Math.sqrt(dx*dx+dy*dy);if(d<230)svg+='<line x1="'+pts[a].x+'" y1="'+pts[a].y+'" x2="'+pts[b].x+'" y2="'+pts[b].y+'" stroke="'+c+'" stroke-opacity="'+(0.22*(1-d/230)).toFixed(3)+'" stroke-width="1"/>'}
+    pts.forEach(function(p,idx){svg+='<circle cx="'+p.x+'" cy="'+p.y+'" r="'+p.r+'" fill="'+(idx%5===0?'#fcc331':c)+'" fill-opacity=".55"><animate attributeName="fill-opacity" values=".25;.7;.25" dur="'+(3+idx%4)+'s" repeatCount="indefinite"/></circle>'});
+    svg+='</svg>';
+    sl.insertAdjacentHTML('afterbegin',svg);
+  });
+
+  /* estrelas nos slides space */
+  S.forEach(function(sl,i){
+    if(!sl.classList.contains('space'))return;
+    var rnd=seeded(i*3+5),w=document.createElement('div');w.className='stars';var h='';
+    for(var k=0;k<60;k++)h+='<i style="left:'+(rnd()*100)+'%;top:'+(rnd()*100)+'%;animation-delay:'+(rnd()*4)+'s;transform:scale('+(0.5+rnd()*1.4)+')"></i>';
+    w.innerHTML=h;sl.insertAdjacentElement('afterbegin',w);
+  });
+
+  /* contadores */
+  function countUp(el){
+    if(el.dataset.done)return;el.dataset.done=1;
+    var end=+el.dataset.count,pre=el.dataset.prefix||'',suf=el.dataset.suffix||'',t0=null;
+    function step(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/1300),e=1-Math.pow(1-p,3);el.textContent=pre+Math.round(end*e)+suf;if(p<1)requestAnimationFrame(step)}
+    requestAnimationFrame(step);
+  }
+
+  var hint=document.createElement('div');hint.className='nav-hint';hint.innerHTML='<kbd>↑</kbd><kbd>↓</kbd><span>navegar</span>';document.body.appendChild(hint);
+
+  var q=new URLSearchParams(location.search),stat=q.get('static');
+  function activate(sl){sl.classList.add('on');[].slice.call(sl.querySelectorAll('[data-count]')).forEach(function(el){if(stat){el.textContent=(el.dataset.prefix||'')+el.dataset.count+(el.dataset.suffix||'')}else countUp(el)})}
+  if(stat){S.forEach(activate);document.documentElement.style.scrollBehavior='auto';var n=+q.get('slide')||1;S.forEach(function(x,i){if(i!==n-1)x.style.display='none'});cur=n-1;count.textContent=pad(n)+' / '+S.length;prog.style.width=(n/S.length*100)+'%'}
+  else if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){activate(e.target);cur=S.indexOf(e.target);prog.style.width=((cur+1)/S.length*100)+'%';count.textContent=pad(cur+1)+' / '+S.length}})},{threshold:.4});
+    S.forEach(function(x){io.observe(x)});
+  }else{S.forEach(activate)}
+  function go(i){i=Math.max(0,Math.min(S.length-1,i));S[i].scrollIntoView({behavior:'smooth'})}
+  document.addEventListener('keydown',function(e){if(['ArrowDown','ArrowRight',' ','PageDown'].indexOf(e.key)>=0){e.preventDefault();go(cur+1)}if(['ArrowUp','ArrowLeft','PageUp'].indexOf(e.key)>=0){e.preventDefault();go(cur-1)}});
+})();
+</script>
+</body>
+</html>
